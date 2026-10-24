@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070A12"/>
+      <stop offset="50%" stop-color="#0B0F19"/>
+      <stop offset="100%" stop-color="#0A1128"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141C2E"/>
+      <stop offset="100%" stop-color="#0E1626"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 800; fill: #FFFFFF; }
+    .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 400; fill: #94A3B8; }
+    .badge-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 1.5px; fill: #38BDF8; }
+    .node-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 700; font-size: 15px; fill: #F8FAFC; }
+    .node-tech { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 600; font-size: 11px; fill: #38BDF8; letter-spacing: 0.5px; }
+    .node-desc { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 400; font-size: 11px; fill: #94A3B8; line-height: 1.4; }
+    .callout-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 700; font-size: 13px; fill: #F1F5F9; }
+    .callout-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 400; font-size: 11px; fill: #94A3B8; }
+    .footer-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 500; font-size: 12px; fill: #64748B; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bgGrad)"/>
+
+  <!-- Subtle Grid Lines -->
+  <g opacity="0.05" stroke="#38BDF8" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="675"/>
+    <line x1="300" y1="0" x2="300" y2="675"/>
+    <line x1="500" y1="0" x2="500" y2="675"/>
+    <line x1="700" y1="0" x2="700" y2="675"/>
+    <line x1="900" y1="0" x2="900" y2="675"/>
+    <line x1="1100" y1="0" x2="1100" y2="675"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="480" x2="1200" y2="480"/>
+  </g>
+
+  <!-- Top Header / Pill -->
+  <g transform="translate(60, 45)">
+    <rect x="0" y="0" width="280" height="26" rx="13" fill="#0E2238" stroke="#0284C7" stroke-width="1"/>
+    <circle cx="14" cy="13" r="4" fill="#38BDF8"/>
+    <text x="28" y="17" class="badge-text">GROWTH TELEMETRY ARCHITECTURE</text>
+  </g>
+
+  <!-- Title & Subtitle -->
+  <text x="60" y="112" class="title" font-size="28">Non-Blocking Telemetry Ingestion Pipeline</text>
+  <text x="60" y="138" class="subtitle" font-size="14">How high-scale SaaS architectures decouple user web requests from analytical attribution and deduplication.</text>
+
+  <!-- Flow Connector Lines -->
+  <g stroke="#1E3A8A" stroke-width="3" stroke-dasharray="6,4">
+    <line x1="210" y1="265" x2="280" y2="265"/>
+    <line x1="450" y1="265" x2="520" y2="265"/>
+    <line x1="690" y1="265" x2="760" y2="265"/>
+    <line x1="930" y1="265" x2="1000" y2="265"/>
+  </g>
+
+  <!-- Flow Arrow Heads -->
+  <polygon points="278,260 288,265 278,270" fill="#38BDF8"/>
+  <polygon points="518,260 528,265 518,270" fill="#38BDF8"/>
+  <polygon points="758,260 768,265 758,270" fill="#38BDF8"/>
+  <polygon points="998,260 1008,265 998,270" fill="#38BDF8"/>
+
+  <!-- NODE 1: Client Application -->
+  <g transform="translate(50, 180)">
+    <rect width="160" height="170" rx="10" fill="url(#cardGrad)" stroke="#1E293B" stroke-width="1.5"/>
+    <rect width="160" height="4" rx="2" fill="#38BDF8"/>
+    <circle cx="28" cy="30" r="14" fill="#0E2238"/>
+    <text x="24" y="35" font-family="sans-serif" font-weight="700" font-size="12" fill="#38BDF8">01</text>
+    <text x="50" y="32" class="node-tech">CLIENT APP</text>
+    <text x="20" y="70" class="node-title">Client Action</text>
+    <text x="20" y="95" class="node-desc">User completes signup,</text>
+    <text x="20" y="112" class="node-desc">checkout, or feature</text>
+    <text x="20" y="129" class="node-desc">activation event.</text>
+    <rect x="15" y="142" width="130" height="20" rx="4" fill="#0B132B"/>
+    <text x="25" y="156" font-family="monospace" font-size="10" fill="#7DD3FC">POST /v1/telemetry</text>
+  </g>
+
+  <!-- NODE 2: Edge Ingestion Gateway -->
+  <g transform="translate(290, 180)">
+    <rect width="160" height="170" rx="10" fill="url(#cardGrad)" stroke="#0284C7" stroke-width="1.5"/>
+    <rect width="160" height="4" rx="2" fill="#0284C7"/>
+    <circle cx="28" cy="30" r="14" fill="#082F49"/>
+    <text x="24" y="35" font-family="sans-serif" font-weight="700" font-size="12" fill="#38BDF8">02</text>
+    <text x="50" y="32" class="node-tech">EDGE GATEWAY</text>
+    <text x="20" y="70" class="node-title">FastAPI / Envoy</text>
+    <text x="20" y="95" class="node-desc">Validates payload shape.</text>
+    <text x="20" y="112" class="node-desc">Dispatches to stream.</text>
+    <text x="20" y="129" class="node-desc">Zero blocking query.</text>
+    <rect x="15" y="142" width="130" height="20" rx="4" fill="#042F2E"/>
+    <text x="23" y="156" font-family="monospace" font-size="10" fill="#34D399">HTTP 202 &lt; 15ms</text>
+  </g>
+
+  <!-- NODE 3: Distributed Queue -->
+  <g transform="translate(530, 180)">
+    <rect width="160" height="170" rx="10" fill="url(#cardGrad)" stroke="#1E293B" stroke-width="1.5"/>
+    <rect width="160" height="4" rx="2" fill="#818CF8"/>
+    <circle cx="28" cy="30" r="14" fill="#1E1B4B"/>
+    <text x="24" y="35" font-family="sans-serif" font-weight="700" font-size="12" fill="#818CF8">03</text>
+    <text x="50" y="32" class="node-tech">STREAM QUEUE</text>
+    <text x="20" y="70" class="node-title">Redis / Kafka</text>
+    <text x="20" y="95" class="node-desc">Buffers high-throughput</text>
+    <text x="20" y="112" class="node-desc">traffic spikes during</text>
+    <text x="20" y="129" class="node-desc">major product launches.</text>
+    <rect x="15" y="142" width="130" height="20" rx="4" fill="#181335"/>
+    <text x="25" y="156" font-family="monospace" font-size="10" fill="#C084FC">FIFO Event Stream</text>
+  </g>
+
+  <!-- NODE 4: Validation Worker -->
+  <g transform="translate(770, 180)">
+    <rect width="160" height="170" rx="10" fill="url(#cardGrad)" stroke="#1E293B" stroke-width="1.5"/>
+    <rect width="160" height="4" rx="2" fill="#F59E0B"/>
+    <circle cx="28" cy="30" r="14" fill="#451A03"/>
+    <text x="24" y="35" font-family="sans-serif" font-weight="700" font-size="12" fill="#FBBF24">04</text>
+    <text x="50" y="32" class="node-tech">ASYNC WORKER</text>
+    <text x="20" y="70" class="node-title">Dedupe Engine</text>
+    <text x="20" y="95" class="node-desc">Computes SHA-256 key.</text>
+    <text x="20" y="112" class="node-desc">Filters network retry</text>
+    <text x="20" y="129" class="node-desc">duplicates safely.</text>
+    <rect x="15" y="142" width="130" height="20" rx="4" fill="#2E1B05"/>
+    <text x="23" y="156" font-family="monospace" font-size="10" fill="#FCD34D">SHA-256 Fingerprint</text>
+  </g>
+
+  <!-- NODE 5: Analytics Warehouse -->
+  <g transform="translate(1010, 180)">
+    <rect width="140" height="170" rx="10" fill="url(#cardGrad)" stroke="#10B981" stroke-width="1.5"/>
+    <rect width="140" height="4" rx="2" fill="#10B981"/>
+    <circle cx="28" cy="30" r="14" fill="#064E3B"/>
+    <text x="24" y="35" font-family="sans-serif" font-weight="700" font-size="12" fill="#34D399">05</text>
+    <text x="50" y="32" class="node-tech">ANALYTICS DB</text>
+    <text x="20" y="70" class="node-title">PostgreSQL</text>
+    <text x="20" y="95" class="node-desc">Stores clean, verified,</text>
+    <text x="20" y="112" class="node-desc">immutable records</text>
+    <text x="20" y="129" class="node-desc">for cohort queries.</text>
+    <rect x="15" y="142" width="110" height="20" rx="4" fill="#064E3B"/>
+    <text x="25" y="156" font-family="monospace" font-size="10" fill="#6EE7B7">Unique Index</text>
+  </g>
+
+  <!-- Bottom Architecture Takeaways (3 Cards) -->
+  <g transform="translate(50, 395)">
+    <!-- Card 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="340" height="185" rx="8" fill="#0C1322" stroke="#1E293B" stroke-width="1"/>
+      <rect x="0" y="0" width="4" height="185" rx="2" fill="#38BDF8"/>
+      <text x="24" y="35" class="callout-title">1. Non-Blocking Response Path</text>
+      <text x="24" y="65" class="callout-body">The edge gateway accepts telemetry events</text>
+      <text x="24" y="85" class="callout-body">and replies immediately with HTTP 202.</text>
+      <text x="24" y="110" class="callout-body">User-facing checkout or signup flows are</text>
+      <text x="24" y="130" class="callout-body">never held hostage by analytics database latency.</text>
+      <text x="24" y="158" font-family="monospace" font-size="11" fill="#38BDF8">P99 Latency: &lt; 15ms at Edge</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(370, 0)">
+      <rect width="340" height="185" rx="8" fill="#0C1322" stroke="#1E293B" stroke-width="1"/>
+      <rect x="0" y="0" width="4" height="185" rx="2" fill="#818CF8"/>
+      <text x="24" y="35" class="callout-title">2. Traffic Spike Absorption</text>
+      <text x="24" y="65" class="callout-body">When a product release or campaign drives</text>
+      <text x="24" y="85" class="callout-body">a 10x traffic surge, the message queue buffers</text>
+      <text x="24" y="110" class="callout-body">events safely. Workers process records at</text>
+      <text x="24" y="130" class="callout-body">sustainable database write capacity.</text>
+      <text x="24" y="158" font-family="monospace" font-size="11" fill="#818CF8">Zero Dropped Attribution Events</text>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(740, 0)">
+      <rect width="360" height="185" rx="8" fill="#0C1322" stroke="#1E293B" stroke-width="1"/>
+      <rect x="0" y="0" width="4" height="185" rx="2" fill="#10B981"/>
+      <text x="24" y="35" class="callout-title">3. Idempotent Deduplication</text>
+      <text x="24" y="65" class="callout-body">Mobile network retries fire duplicate requests.</text>
+      <text x="24" y="85" class="callout-body">Hashing user ID, event type, and payload</text>
+      <text x="24" y="110" class="callout-body">produces a deterministic fingerprint that</text>
+      <text x="24" y="130" class="callout-body">enforces idempotency at the database layer.</text>
+      <text x="24" y="158" font-family="monospace" font-size="11" fill="#10B981">100% Data Fidelity in Cohorts</text>
+    </g>
+  </g>
+
+  <!-- Footer Branding -->
+  <text x="60" y="625" class="footer-text">IncuBrix Growth Engineering Blueprint  •  Asset: ast_bp_05_x_graph  •  Platform: X (Twitter)</text>
+  <text x="1140" y="625" class="footer-text" text-anchor="end">Production Status: Planned</text>
+</svg>

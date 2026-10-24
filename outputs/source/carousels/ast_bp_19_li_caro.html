@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ast_bp_19_li_caro: The Growth Engineer's Data Hygiene Guide</title>
+  <style>
+    :root {
+      --bg: #0F0C20;
+      --card-bg: #1B1536;
+      --border: #2E2459;
+      --purple: #A855F7;
+      --indigo: #6366F1;
+      --cyan: #38BDF8;
+      --pink: #EC4899;
+      --text-main: #FAF5FF;
+      --text-muted: #A8A29E;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #06040A;
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      gap: 30px;
+    }
+    .deck-header {
+      max-width: 600px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .deck-header h1 { font-size: 22px; color: var(--purple); margin-bottom: 6px; }
+    .deck-header p { font-size: 13px; color: var(--text-muted); }
+
+    .slide {
+      width: 540px;
+      height: 675px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      overflow: hidden;
+    }
+    .slide::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, var(--purple), var(--indigo));
+    }
+    .slide-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: rgba(168, 85, 247, 0.1);
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--purple);
+      text-transform: uppercase;
+      align-self: flex-start;
+    }
+    .slide-title {
+      font-size: 26px;
+      font-weight: 800;
+      line-height: 1.25;
+      color: #FFFFFF;
+      margin-top: 16px;
+      margin-bottom: 12px;
+    }
+    .slide-subtitle {
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--text-muted);
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      margin-top: 12px;
+    }
+    .card-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--purple);
+      margin-bottom: 6px;
+    }
+    .card-body {
+      font-size: 12px;
+      line-height: 1.5;
+      color: #E9D5FF;
+    }
+    .slide-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 14px;
+      font-size: 11px;
+      color: #78716C;
+    }
+    .slide-num {
+      color: var(--purple);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="deck-header">
+    <h1>ast_bp_19_li_caro • Slide Deck Specification</h1>
+    <p>6-Slide LinkedIn Document Carousel • Format: 1080x1350 • Pillar: Attribution & Data Integrity</p>
+  </div>
+
+  <!-- SLIDE 1 -->
+  <div class="slide" id="slide-1">
+    <div>
+      <div class="slide-badge">DATA INTEGRITY HANDBOOK</div>
+      <h2 class="slide-title">The Growth Engineer's Data Hygiene Guide</h2>
+      <p class="slide-subtitle">Bad telemetry data produces bad growth decisions. The 6-step quarterly checklist to audit, clean, and protect your event pipelines.</p>
+      
+      <div class="card" style="margin-top: 30px;">
+        <div class="card-title">WHAT THIS AUDIT COVERS:</div>
+        <p class="card-body">
+          • Schema strictness at the API boundary<br>
+          • Orphan event pruning to reduce cloud analytics spend<br>
+          • Mandatory UTC timestamp normalization<br>
+          • Strict lowercase UTM taxonomies and formula injection defense
+        </p>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span>IncuBrix Telemetry Playbook</span>
+      <span class="slide-num">Swipe to inspect audits -> [1/6]</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 2 -->
+  <div class="slide" id="slide-2">
+    <div>
+      <div class="slide-badge">AUDIT 1 &amp; 2: SCHEMAS &amp; ORPHANS</div>
+      <h2 class="slide-title">Edge Validation &amp; Orphan Events</h2>
+      <p class="slide-subtitle">Two structural audits to eliminate corrupt or unnecessary data before it enters your warehouse:</p>
+      
+      <div class="card">
+        <div class="card-title">Audit 1: Schema Enforcement at the Edge</div>
+        <p class="card-body"><strong>Problem:</strong> Flexible JSON schemas sound convenient until frontend sends strings where integers are expected.<br>
+        <strong>Fix:</strong> Enforce strict Pydantic validation at the gateway. Quarantine malformed payloads before they reach downstream models.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Audit 2: Orphan Event Pruning</div>
+        <p class="card-body"><strong>Problem:</strong> Deprecated features from 2024 still fire 50,000 events a day, inflating cloud analytics storage costs.<br>
+        <strong>Fix:</strong> Query events with zero dashboard queries over 90 days. Safely sunset unused telemetry hooks.</p>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span>IncuBrix Telemetry Playbook</span>
+      <span class="slide-num">[Slide 2/6]</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 3 -->
+  <div class="slide" id="slide-3">
+    <div>
+      <div class="slide-badge">AUDIT 3 &amp; 4: TIMESTAMPS &amp; DEDUPE</div>
+      <h2 class="slide-title">UTC Normalization &amp; Idempotency</h2>
+      <p class="slide-subtitle">Ensure cohort metrics and retention curves reflect true user activity:</p>
+      
+      <div class="card">
+        <div class="card-title">Audit 3: Mandatory Server-Side UTC</div>
+        <p class="card-body"><strong>Problem:</strong> Client device clocks are frequently inaccurate or configured in local time zones, distorting Day-1 retention cohorts.<br>
+        <strong>Fix:</strong> Assign ISO-8601 UTC timestamps at the server ingestion boundary. Never rely on device clocks for analytical ordering.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Audit 4: Idempotent Event Deduplication</div>
+        <p class="card-body"><strong>Problem:</strong> Mobile network reconnects resend HTTP requests, double-counting signup conversions.<br>
+        <strong>Fix:</strong> Generate deterministic SHA-256 fingerprints and enforce unique constraints in the analytics database.</p>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span>IncuBrix Telemetry Playbook</span>
+      <span class="slide-num">[Slide 3/6]</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 4 -->
+  <div class="slide" id="slide-4">
+    <div>
+      <div class="slide-badge">AUDIT 5 &amp; 6: UTMS &amp; SECURITY</div>
+      <h2 class="slide-title">UTM Taxonomies &amp; Injection Defense</h2>
+      <p class="slide-subtitle">Protect your attribution reporting and spreadsheet consumers:</p>
+      
+      <div class="card">
+        <div class="card-title">Audit 5: Programmatic Lowercase UTMs</div>
+        <p class="card-body"><strong>Problem:</strong> Inconsistent casing like <code>utm_source=LinkedIn</code> vs <code>linkedin</code> splits marketing attribution into disjoint buckets.<br>
+        <strong>Fix:</strong> Enforce strict lowercase transforms and validated platform enums in all link builders.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Audit 6: CSV Formula Injection Protection</div>
+        <p class="card-body"><strong>Problem:</strong> Telemetry values starting with <code>=</code>, <code>+</code>, <code>-</code>, or <code>@</code> can execute arbitrary formulas in spreadsheet applications.<br>
+        <strong>Fix:</strong> Sanitize exports by prefixing potentially dangerous leading characters with a single quote.</p>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span>IncuBrix Telemetry Playbook</span>
+      <span class="slide-num">[Slide 4/6]</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 5 -->
+  <div class="slide" id="slide-5">
+    <div>
+      <div class="slide-badge" style="color: #38BDF8; border-color: rgba(56,189,248,0.3); background: rgba(56,189,248,0.1);">DATA HEALTH COCKPIT</div>
+      <h2 class="slide-title">Automated Telemetry Health Monitoring</h2>
+      <p class="slide-subtitle">Configure automated alerts to catch pipeline anomalies before stakeholders notice:</p>
+      
+      <div class="card">
+        <div class="card-title" style="color: #38BDF8;">CRITICAL ALERT THRESHOLDS</div>
+        <p class="card-body" style="font-size: 12.5px; line-height: 1.8;">
+          🚨 <strong>Event Volume Drops:</strong> Alert if hourly volume falls &gt; 30% below 7-day average.<br>
+          🚨 <strong>Schema Rejection Rate:</strong> Alert if malformed payload rate exceeds 0.5%.<br>
+          🚨 <strong>Ingestion Latency:</strong> Alert if P99 edge response exceeds 50ms.<br>
+          🚨 <strong>Queue Backlog:</strong> Alert if consumer queue exceeds 10,000 pending events.
+        </p>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span>IncuBrix Telemetry Playbook</span>
+      <span class="slide-num">[Slide 5/6]</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 6 -->
+  <div class="slide" id="slide-6">
+    <div>
+      <div class="slide-badge">QUARTERLY HYGIENE</div>
+      <h2 class="slide-title">Run Your Quarterly Data Audit</h2>
+      <p class="slide-subtitle">Clean data is a competitive advantage. Instrument pipelines that engineering, marketing, and leadership can trust implicitly.</p>
+      
+      <div class="card" style="margin-top: 30px; background: #261642; border-color: var(--purple);">
+        <div class="card-title" style="color: #C084FC;">DOWNLOAD THE DATA HYGIENE GUIDE</div>
+        <p class="card-body" style="color: #FAF5FF;">
+          Get our comprehensive 6-step checklist, SQL audit queries, and CSV sanitization snippets via the link in this post.
+        </p>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span>IncuBrix Telemetry Playbook</span>
+      <span class="slide-num">Save for next quarter • [6/6]</span>
+    </div>
+  </div>
+
+</body>
+</html>

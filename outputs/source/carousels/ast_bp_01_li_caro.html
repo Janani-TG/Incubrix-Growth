@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ast_bp_01_li_caro: 5-Slide Growth Telemetry Architecture</title>
+  <style>
+    :root {
+      --bg: #0B0F19;
+      --card-bg: #141C2E;
+      --border: #1E293B;
+      --cyan: #38BDF8;
+      --blue: #3B82F6;
+      --emerald: #10B981;
+      --purple: #A855F7;
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #020617;
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      gap: 30px;
+    }
+    .deck-header {
+      max-width: 600px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .deck-header h1 { font-size: 22px; color: var(--cyan); margin-bottom: 6px; }
+    .deck-header p { font-size: 13px; color: var(--text-muted); }
+
+    /* 4:5 Slide Container (1080x1350 scaled to 540x675 for screen preview) */
+    .slide {
+      width: 540px;
+      height: 675px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      overflow: hidden;
+    }
+    .slide::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, var(--cyan), var(--blue));
+    }
+    .slide-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--cyan);
+      text-transform: uppercase;
+      align-self: flex-start;
+    }
+    .slide-title {
+      font-size: 26px;
+      font-weight: 800;
+      line-height: 1.25;
+      color: #FFFFFF;
+      margin-top: 16px;
+      margin-bottom: 12px;
+    }
+    .slide-subtitle {
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--text-muted);
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px;
+      margin-top: 14px;
+    }
+    .card-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--cyan);
+      margin-bottom: 8px;
+    }
+    .card-body {
+      font-size: 12.5px;
+      line-height: 1.5;
+      color: #CBD5E1;
+    }
+    .metric-highlight {
+      display: inline-block;
+      font-weight: 700;
+      color: var(--cyan);
+    }
+    .code-box {
+      background: #070A12;
+      border: 1px solid #1E293B;
+      border-radius: 6px;
+      padding: 12px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 11.5px;
+      color: #7DD3FC;
+      line-height: 1.5;
+      margin-top: 12px;
+    }
+    .slide-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 14px;
+      font-size: 11px;
+      color: #64748B;
+    }
+    .slide-num {
+      color: var(--cyan);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="deck-header">
+    <h1>ast_bp_01_li_caro • Slide Deck Specification</h1>
+    <p>5-Slide LinkedIn Document Carousel • Format: 1080x1350 (4:5 Ratio) • Pillar: Architecture</p>
+  </div>
+
+  <!-- SLIDE 1 -->
+  <div class="slide" id="slide-1">
+    <div>
+      <div class="slide-badge">SYSTEM ARCHITECTURE BREAKDOWN</div>
+      <h2 class="slide-title">The 5-Slide Technical Growth Telemetry Architecture</h2>
+      <p class="slide-subtitle">Most B2B SaaS growth funnels leak data before they ever leak revenue. Here is how high-scale teams instrument resilient, non-blocking telemetry pipelines.</p>
+      
+      <div class="card" style="margin-top: 30px;">
+        <div class="card-title">WHAT THIS ARCHITECTURE SOLVES:</div>
+        <p class="card-body">
+          • Eliminates user-facing lag during analytics tracking<br>
+          • Prevents ad-blocker event interception<br>
+          • Blocks duplicate conversion metrics via SHA-256 fingerprints
+        </p>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span>IncuBrix Growth Engineering</span>
+      <span class="slide-num">Swipe to inspect architecture -> [1/5]</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 2 -->
+  <div class="slide" id="slide-2">
+    <div>
+      <div class="slide-badge" style="color: #F87171; border-color: rgba(248,113,113,0.3); background: rgba(248,113,113,0.1);">PHASE 1: THE INGESTION VULNERABILITY</div>
+      <h2 class="slide-title">The Client-Side Telemetry Trap</h2>
+      <p class="slide-subtitle">Why traditional client-side JavaScript analytics fails in modern SaaS production:</p>
+      
+      <div class="card">
+        <div class="card-title" style="color: #F87171;">1. Ad Blocker Interception</div>
+        <p class="card-body">15–25% of client-side tracking events silently fail to reach third-party analytics endpoints due to browser ad blockers and strict tracking prevention.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title" style="color: #F87171;">2. Uncontrolled Schema Drift</div>
+        <p class="card-body">Frontend UI refactors rename buttons or omit payload parameters, silently corrupting historical funnel metrics without triggering build errors.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title" style="color: #F87171;">3. Double-Counted Conversions</div>
+        <p class="card-body">Mobile network retries resend registration calls, double-counting signups and skewing Day-1 retention cohorts.</p>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span>IncuBrix Engineering Playbook</span>
+      <span class="slide-num">[Slide 2/5]</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 3 -->
+  <div class="slide" id="slide-3">
+    <div>
+      <div class="slide-badge">PHASE 2: NON-BLOCKING EVENT STREAM</div>
+      <h2 class="slide-title">Asynchronous Ingestion Architecture</h2>
+      <p class="slide-subtitle">Decouple user response latency from analytical processing with a distributed event queue:</p>
+      
+      <div class="code-box">
+Client Action (HTTP POST)<br>
+  ↓ (P99 &lt; 15ms Response)<br>
+Edge Gateway (FastAPI / Envoy → HTTP 202)<br>
+  ↓ (Asynchronous Buffer)<br>
+Distributed Queue (Redis / SQS FIFO)<br>
+  ↓ (Validated Consumer)<br>
+Worker Engine (Schema Check &amp; Dedupe)<br>
+  ↓ (Immutable Storage)<br>
+Analytics DB (PostgreSQL / ClickHouse)
+      </div>
+
+      <div class="card">
+        <div class="card-title">LATENCY GUARDRAIL</div>
+        <p class="card-body">The edge gateway accepts events and immediately replies with <span class="metric-highlight">HTTP 202 Accepted</span>. User signups and payments are never blocked by analytical database writes.</p>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span>IncuBrix Engineering Playbook</span>
+      <span class="slide-num">[Slide 3/5]</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 4 -->
+  <div class="slide" id="slide-4">
+    <div>
+      <div class="slide-badge" style="color: #FBBF24; border-color: rgba(251,191,36,0.3); background: rgba(251,191,36,0.1);">PHASE 3: IDEMPOTENT RECORDING</div>
+      <h2 class="slide-title">SHA-256 Fingerprint Deduplication</h2>
+      <p class="slide-subtitle">Guarantee exact-once recording semantics across all cohort analysis tables:</p>
+      
+      <div class="code-box">
+def compute_fingerprint(event: TelemetryPayload) -&gt; str:<br>
+&nbsp;&nbsp;raw = f"{event.user_id}|{event.name}|{event.utc_ts}"<br>
+&nbsp;&nbsp;return hashlib.sha256(raw.encode()).hexdigest()
+      </div>
+
+      <div class="card">
+        <div class="card-title" style="color: #FBBF24;">DATABASE UNIQUENESS CONSTRAINT</div>
+        <p class="card-body">A composite unique index on <code>(fingerprint)</code> ensures that duplicate network dispatches are safely ignored at the database layer without throwing exceptions or inflating event counts.</p>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span>IncuBrix Engineering Playbook</span>
+      <span class="slide-num">[Slide 4/5]</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 5 -->
+  <div class="slide" id="slide-5">
+    <div>
+      <div class="slide-badge" style="color: #34D399; border-color: rgba(52,211,153,0.3); background: rgba(52,211,153,0.1);">PRODUCTION READINESS</div>
+      <h2 class="slide-title">The Telemetry Audit Checklist</h2>
+      <p class="slide-subtitle">Four mandatory checks before deploying growth telemetry to production:</p>
+      
+      <div class="card">
+        <p class="card-body" style="font-size: 13px; line-height: 1.8;">
+          ☑ <strong>Server-Side Dispatch:</strong> Route conversion events via backend API calls.<br>
+          ☑ <strong>Idempotency Keys:</strong> Pass deterministic SHA-256 fingerprints.<br>
+          ☑ <strong>Standardized Enums:</strong> Strictly validate event types at API boundary.<br>
+          ☑ <strong>Asynchronous Queuing:</strong> Buffer event spikes with Redis or SQS.
+        </p>
+      </div>
+
+      <div class="card" style="margin-top: 20px; background: #0E2238; border-color: var(--cyan);">
+        <div class="card-title">GET THE BLUEPRINT</div>
+        <p class="card-body">Download the full architecture specification and sample code via the link in this post.</p>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span>IncuBrix Growth Engineering</span>
+      <span class="slide-num">Save for your next sprint • [5/5]</span>
+    </div>
+  </div>
+
+</body>
+</html>

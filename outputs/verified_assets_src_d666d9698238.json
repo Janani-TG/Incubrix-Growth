@@ -1,0 +1,462 @@
+{
+  "export_metadata": {
+    "exported_at": "2026-10-24T18:21:50.227978+00:00",
+    "generator": "incubrix-content-engine",
+    "engine_version": "0.1.0"
+  },
+  "schema_version": "1.0.0",
+  "applied_filters": {
+    "platform": null,
+    "status": null,
+    "source_id": "src_d666d9698238"
+  },
+  "asset_count": 12,
+  "assets": [
+    {
+      "id": "ast_rd_text_ac1948d4",
+      "platform": "Reddit",
+      "content_format": "text_post",
+      "content_pillar": "Technical Case Studies",
+      "audience_segment": "r/SaaS & r/GrowthHacking Community",
+      "hook": "Technical Teardown: How telemetry loops compound engineering output",
+      "main_content": "Detailed breakdown of findings from source document 'E2E Verification: Event-Driven Lifecycle Pipelines in Modern Growth Stacks':\n\n1. Core Observation: Teams that fail to instrument behavioral activation thresholds see 68% of new accounts go dormant within the first billing cycle.\n2. Methodological note: Set a target activation milestone of 3 core actions completed within 24 hours.\n\nIndustry benchmark note: While some external reports claim 40% cost reductions, this assertion requires verification against primary engineering metrics.\n\nSharing this without sales pitch to get peer feedback on implementation trade-offs.",
+      "caption": "Analytical teardown analyzing telemetry models and cohort measurement.",
+      "hashtags": [
+        "#SaaS",
+        "#CaseStudy",
+        "#Engineering"
+      ],
+      "call_to_action": "Open to technical feedback and questions in the comments.",
+      "tracking_url": "https://incubrix.com/solutions/growth-pipelines?utm_source=reddit&utm_medium=social_post&utm_campaign=e2e_verification&utm_content=text_post_ast_rd_t",
+      "source_id": "src_d666d9698238",
+      "evidence_references": [
+        {
+          "claim": "Teams that fail to instrument behavioral activation thresholds see 68% of new accounts go dormant within the first billing cycle.",
+          "source_quote": "Teams that fail to instrument behavioral activation thresholds see 68% of new accounts go dormant within the first billing cycle.",
+          "section_or_page": "1. The Critical Onboarding Window (\u00b61)",
+          "is_verified": true,
+          "verification_notes": null
+        },
+        {
+          "claim": "Set a target activation milestone of 3 core actions completed within 24 hours.",
+          "source_quote": "- Set a target activation milestone of 3 core actions completed within 24 hours.",
+          "section_or_page": "1. The Critical Onboarding Window (\u00b63)",
+          "is_verified": true,
+          "verification_notes": null
+        },
+        {
+          "claim": "Early activation optimization reduces customer acquisition costs by 40%.",
+          "source_quote": "Generic industry benchmark claim requiring verification against primary source data.",
+          "section_or_page": "General Industry Speculation",
+          "is_verified": false,
+          "verification_notes": "Unverified industry percentage claim flagged for manual human verification."
+        }
+      ],
+      "review_required": true,
+      "review_notes": "Flagged for manual review: contains unverified benchmark claim. [Flagged for review: contains unverified evidence claim]",
+      "generation_method": "template",
+      "created_at": "2026-10-24T18:21:50.200064Z",
+      "status": "needs_review",
+      "duration_seconds": null
+    },
+    {
+      "id": "ast_rd_disc_203ccfa9",
+      "platform": "Reddit",
+      "content_format": "discussion_post",
+      "content_pillar": "Engineering Discourse",
+      "audience_segment": "r/softwareengineering & r/startups Community",
+      "hook": "What are your team's hard criteria before scaling channel acquisition?",
+      "main_content": "We recently analyzed growth telemetry frameworks and wanted to open a technical discussion.\n\nThe source findings noted: 'The initial 72 hours of user onboarding determine long-term enterprise retention.'\n\nIn our experience, teams often skip event verification during early sprints, leading to noisy attribution.\n\nQuestions for the community:\n- What event schema standards do you enforce for user activation?\n- How do you handle cohort retention degradation in early releases?",
+      "caption": "Technical community discussion on telemetry criteria before channel expansion.",
+      "hashtags": [
+        "#SoftwareEngineering",
+        "#Architecture",
+        "#Discussion"
+      ],
+      "call_to_action": "Curious to hear how other teams handle this in production.",
+      "tracking_url": "https://incubrix.com/solutions/growth-pipelines?utm_source=reddit&utm_medium=community&utm_campaign=e2e_verification&utm_content=discussion_post_ast_rd_d",
+      "source_id": "src_d666d9698238",
+      "evidence_references": [
+        {
+          "claim": "The initial 72 hours of user onboarding determine long-term enterprise retention.",
+          "source_quote": "The initial 72 hours of user onboarding determine long-term enterprise retention.",
+          "section_or_page": "1. The Critical Onboarding Window (\u00b61)",
+          "is_verified": true,
+          "verification_notes": null
+        }
+      ],
+      "review_required": false,
+      "review_notes": null,
+      "generation_method": "template",
+      "created_at": "2026-10-24T18:21:50.199943Z",
+      "status": "draft",
+      "duration_seconds": null
+    },
+    {
+      "id": "ast_yt_60_bf0d5e05",
+      "platform": "YouTube Shorts",
+      "content_format": "short_video",
+      "content_pillar": "In-Depth Technical Teardowns",
+      "audience_segment": "Senior Software Engineers",
+      "hook": "Here is the exact telemetry framework high-scale engineering teams use.",
+      "main_content": "[0:00 - 0:10] (Setup) Let's examine how scalable engineering architectures measure retention.\n[0:10 - 0:25] (Metric inspection) Fact: Teams that fail to instrument behavioral activation thresholds see 68% of new accounts go dormant within the first billing cycle.. Without this, cohort curves cannot be tracked.\n[0:25 - 0:40] (Architecture deep dive) Also observe: Implement real-time event streaming with Apache Kafka or AWS Kinesis..\n[0:40 - 0:55] (Conclusion) Build the data loops first. Link in the description for the full source paper.",
+      "caption": "Deep dive on telemetry architecture for scalable retention loops. Link in description.",
+      "hashtags": [
+        "#Shorts",
+        "#EngineeringLeadership",
+        "#TechTutorial",
+        "#SystemDesign"
+      ],
+      "call_to_action": "Check the video description for the complete source documentation.",
+      "tracking_url": "https://incubrix.com/solutions/growth-pipelines?utm_source=youtube_shorts&utm_medium=video&utm_campaign=e2e_verification&utm_content=short_video_ast_yt_6",
+      "source_id": "src_d666d9698238",
+      "evidence_references": [
+        {
+          "claim": "Teams that fail to instrument behavioral activation thresholds see 68% of new accounts go dormant within the first billing cycle.",
+          "source_quote": "Teams that fail to instrument behavioral activation thresholds see 68% of new accounts go dormant within the first billing cycle.",
+          "section_or_page": "1. The Critical Onboarding Window (\u00b61)",
+          "is_verified": true,
+          "verification_notes": null
+        },
+        {
+          "claim": "Implement real-time event streaming with Apache Kafka or AWS Kinesis.",
+          "source_quote": "- Implement real-time event streaming with Apache Kafka or AWS Kinesis.",
+          "section_or_page": "1. The Critical Onboarding Window (\u00b62)",
+          "is_verified": true,
+          "verification_notes": null
+        }
+      ],
+      "review_required": false,
+      "review_notes": null,
+      "generation_method": "template",
+      "created_at": "2026-10-24T18:21:50.199835Z",
+      "status": "draft",
+      "duration_seconds": 55.0
+    },
+    {
+      "id": "ast_yt_30_27d2afeb",
+      "platform": "YouTube Shorts",
+      "content_format": "short_video",
+      "content_pillar": "Shorts Teardowns",
+      "audience_segment": "Developers & Startup Teams",
+      "hook": "Why 80% of growth experiments fail before they even start.",
+      "main_content": "[0:00 - 0:05] (Hook visual with flashing alert) Why do most growth experiments fail?\n[0:05 - 0:20] (Visual diagram) Because: The initial 72 hours of user onboarding determine long-term enterprise retention.. Without baseline telemetry, you cannot isolate lift.\n[0:20 - 0:30] (Host on camera) Instrument first, experiment second. Subscribe for weekly teardowns.",
+      "caption": "The engineering data behind experiment success rates. Subscribe for weekly breakdowns!",
+      "hashtags": [
+        "#Shorts",
+        "#Programming",
+        "#TechExplained",
+        "#Developer"
+      ],
+      "call_to_action": "Subscribe for more technical engineering teardowns.",
+      "tracking_url": "https://incubrix.com/solutions/growth-pipelines?utm_source=youtube_shorts&utm_medium=video&utm_campaign=e2e_verification&utm_content=short_video_ast_yt_3",
+      "source_id": "src_d666d9698238",
+      "evidence_references": [
+        {
+          "claim": "The initial 72 hours of user onboarding determine long-term enterprise retention.",
+          "source_quote": "The initial 72 hours of user onboarding determine long-term enterprise retention.",
+          "section_or_page": "1. The Critical Onboarding Window (\u00b61)",
+          "is_verified": true,
+          "verification_notes": null
+        }
+      ],
+      "review_required": false,
+      "review_notes": null,
+      "generation_method": "template",
+      "created_at": "2026-10-24T18:21:50.199727Z",
+      "status": "draft",
+      "duration_seconds": 30.0
+    },
+    {
+      "id": "ast_ig_vid_f0a37cbb",
+      "platform": "Instagram",
+      "content_format": "short_video",
+      "content_pillar": "Tactical Reels",
+      "audience_segment": "Growth Marketers & Indie Builders",
+      "hook": "Stop optimizing ads until you check this one thing.",
+      "main_content": "[0-5s] (Screen recording of code/terminal) On-screen text: 'The #1 growth blindspot'\n[5-20s] (Voiceover) According to engineering data: 'The initial 72 hours of user onboarding determine long-term enterprise retention.'\n[20-30s] (On-screen checklist) Fix your event tracking first. Save this Reel!",
+      "caption": "30-second breakdown on measuring user activation before scaling spend. Save for later!",
+      "hashtags": [
+        "#ReelsTech",
+        "#GrowthTips",
+        "#SaaS",
+        "#Startups"
+      ],
+      "call_to_action": "Follow for more technical engineering breakdowns.",
+      "tracking_url": "https://incubrix.com/solutions/growth-pipelines?utm_source=instagram&utm_medium=video&utm_campaign=e2e_verification&utm_content=short_video_ast_ig_v",
+      "source_id": "src_d666d9698238",
+      "evidence_references": [
+        {
+          "claim": "The initial 72 hours of user onboarding determine long-term enterprise retention.",
+          "source_quote": "The initial 72 hours of user onboarding determine long-term enterprise retention.",
+          "section_or_page": "1. The Critical Onboarding Window (\u00b61)",
+          "is_verified": true,
+          "verification_notes": null
+        }
+      ],
+      "review_required": false,
+      "review_notes": null,
+      "generation_method": "template",
+      "created_at": "2026-10-24T18:21:50.199618Z",
+      "status": "draft",
+      "duration_seconds": 30.0
+    },
+    {
+      "id": "ast_ig_graph_4e62f5d3",
+      "platform": "Instagram",
+      "content_format": "graphic",
+      "content_pillar": "Data Highlights",
+      "audience_segment": "Startup Engineers",
+      "hook": "The single metric that shifts the equation:",
+      "main_content": "Visual Graphic Spec:\n- High-contrast typography on charcoal background.\n- Large quote text: 'Implement real-time event streaming with Apache Kafka or AWS Kinesis.'\n- Attribution: Source documentation, 1. The Critical Onboarding Window (\u00b62).",
+      "caption": "Direct finding from our technical research. Link in bio for the full document.",
+      "hashtags": [
+        "#TechQuotes",
+        "#EngineeringMindset",
+        "#ProductDesign",
+        "#Data"
+      ],
+      "call_to_action": "Share this with a founder or engineer who is scaling their stack.",
+      "tracking_url": "https://incubrix.com/solutions/growth-pipelines?utm_source=instagram&utm_medium=graphic&utm_campaign=e2e_verification&utm_content=graphic_ast_ig_g",
+      "source_id": "src_d666d9698238",
+      "evidence_references": [
+        {
+          "claim": "Implement real-time event streaming with Apache Kafka or AWS Kinesis.",
+          "source_quote": "- Implement real-time event streaming with Apache Kafka or AWS Kinesis.",
+          "section_or_page": "1. The Critical Onboarding Window (\u00b62)",
+          "is_verified": true,
+          "verification_notes": null
+        }
+      ],
+      "review_required": false,
+      "review_notes": null,
+      "generation_method": "template",
+      "created_at": "2026-10-24T18:21:50.199509Z",
+      "status": "draft",
+      "duration_seconds": null
+    },
+    {
+      "id": "ast_ig_caro_43276b4a",
+      "platform": "Instagram",
+      "content_format": "carousel",
+      "content_pillar": "Visual Growth Guides",
+      "audience_segment": "Tech Entrepreneurs & Designers",
+      "hook": "Why early growth stalls: 4 data points every founder should know \ud83d\udcca",
+      "main_content": "Card 1: Bold cover graphic - 'The Anatomy of a Leaky Funnel'\nCard 2: Primary finding - 'The initial 72 hours of user onboarding determine long-term enterprise retention.'\nCard 3: Secondary observation - 'Teams that fail to instrument behavioral activation thresholds see 68% of new accounts go dormant within the first billing cycle.'\nCard 4: Diagnostic checklist for engineering leads.\nCard 5: Summary takeaway and save prompt.",
+      "caption": "Don't scale ad spend on unmeasured funnels. Here is what the numbers teach us about retention.",
+      "hashtags": [
+        "#TechStartups",
+        "#Infographic",
+        "#StartupLife",
+        "#DataDriven"
+      ],
+      "call_to_action": "Save this post for your next growth review meeting.",
+      "tracking_url": "https://incubrix.com/solutions/growth-pipelines?utm_source=instagram&utm_medium=carousel&utm_campaign=e2e_verification&utm_content=carousel_ast_ig_c",
+      "source_id": "src_d666d9698238",
+      "evidence_references": [
+        {
+          "claim": "The initial 72 hours of user onboarding determine long-term enterprise retention.",
+          "source_quote": "The initial 72 hours of user onboarding determine long-term enterprise retention.",
+          "section_or_page": "1. The Critical Onboarding Window (\u00b61)",
+          "is_verified": true,
+          "verification_notes": null
+        },
+        {
+          "claim": "Teams that fail to instrument behavioral activation thresholds see 68% of new accounts go dormant within the first billing cycle.",
+          "source_quote": "Teams that fail to instrument behavioral activation thresholds see 68% of new accounts go dormant within the first billing cycle.",
+          "section_or_page": "1. The Critical Onboarding Window (\u00b61)",
+          "is_verified": true,
+          "verification_notes": null
+        }
+      ],
+      "review_required": false,
+      "review_notes": null,
+      "generation_method": "template",
+      "created_at": "2026-10-24T18:21:50.199398Z",
+      "status": "draft",
+      "duration_seconds": null
+    },
+    {
+      "id": "ast_x_graph_74a1b779",
+      "platform": "X",
+      "content_format": "graphic",
+      "content_pillar": "Architecture Diagrams",
+      "audience_segment": "Software Developers & Data Engineers",
+      "hook": "Architecture diagram: How telemetry loops compound over time.",
+      "main_content": "Visual Design Brief:\n- Dark background (#0D1117), crisp lime/cyan accents.\n- Central flow diagram: User Ingestion -> Lifecycle Telemetry -> Cohort Analysis.\n- Callout stat card quoting: 'Teams that fail to instrument behavioral activation thresholds see 68% of new accounts go dormant within the first billing cycle.'\n- Minimalist IncuBrix badge in the lower-right corner.",
+      "caption": "Visualizing the telemetry architecture outlined in our recent documentation.",
+      "hashtags": [
+        "#DataEngineering",
+        "#Architecture",
+        "#SystemsDesign"
+      ],
+      "call_to_action": "Check the full architecture doc via the link below.",
+      "tracking_url": "https://incubrix.com/solutions/growth-pipelines?utm_source=x&utm_medium=graphic&utm_campaign=e2e_verification&utm_content=graphic_ast_x_gr",
+      "source_id": "src_d666d9698238",
+      "evidence_references": [
+        {
+          "claim": "Teams that fail to instrument behavioral activation thresholds see 68% of new accounts go dormant within the first billing cycle.",
+          "source_quote": "Teams that fail to instrument behavioral activation thresholds see 68% of new accounts go dormant within the first billing cycle.",
+          "section_or_page": "1. The Critical Onboarding Window (\u00b61)",
+          "is_verified": true,
+          "verification_notes": null
+        }
+      ],
+      "review_required": false,
+      "review_notes": null,
+      "generation_method": "template",
+      "created_at": "2026-10-24T18:21:50.199272Z",
+      "status": "draft",
+      "duration_seconds": null
+    },
+    {
+      "id": "ast_x_post_e1959f69",
+      "platform": "X",
+      "content_format": "text_post",
+      "content_pillar": "Growth Engineering Insights",
+      "audience_segment": "Founders & Builders",
+      "hook": "Hard reality about engineering-led growth:",
+      "main_content": "The initial 72 hours of user onboarding determine long-term enterprise retention.\n\nScaling traffic before instrumenting retention is the fastest way to burn capital.",
+      "caption": "Key takeaway from our latest technical analysis.",
+      "hashtags": [
+        "#BuildInPublic",
+        "#GrowthHacking",
+        "#TechTwitter"
+      ],
+      "call_to_action": "Repost if your team prioritizes retention over vanity metrics.",
+      "tracking_url": "https://incubrix.com/solutions/growth-pipelines?utm_source=x&utm_medium=social_post&utm_campaign=e2e_verification&utm_content=text_post_ast_x_po",
+      "source_id": "src_d666d9698238",
+      "evidence_references": [
+        {
+          "claim": "The initial 72 hours of user onboarding determine long-term enterprise retention.",
+          "source_quote": "The initial 72 hours of user onboarding determine long-term enterprise retention.",
+          "section_or_page": "1. The Critical Onboarding Window (\u00b61)",
+          "is_verified": true,
+          "verification_notes": null
+        }
+      ],
+      "review_required": false,
+      "review_notes": null,
+      "generation_method": "template",
+      "created_at": "2026-10-24T18:21:50.199158Z",
+      "status": "draft",
+      "duration_seconds": null
+    },
+    {
+      "id": "ast_li_vid_ad3ca9e8",
+      "platform": "LinkedIn",
+      "content_format": "short_video",
+      "content_pillar": "Executive Briefings",
+      "audience_segment": "CTOs & Engineering Directors",
+      "hook": "Before scaling ad spend, check this one critical engineering metric.",
+      "main_content": "[0:00 - 0:10] (Direct to camera) Scaling acquisition without retention telemetry is a trap.\n[0:10 - 0:28] (B-roll of metric dashboard) Here is the evidence: The initial 72 hours of user onboarding determine long-term enterprise retention.. Without this, growth loops stall.\n[0:28 - 0:45] (Direct to camera) Instrument your core lifecycle events first. Details in the comments.",
+      "caption": "A 45-second executive briefing on growth telemetry and cohort monitoring.",
+      "hashtags": [
+        "#EngineeringLeadership",
+        "#CTO",
+        "#TechStrategy",
+        "#VideoScript"
+      ],
+      "call_to_action": "Watch the full briefing and join the discussion in the comments.",
+      "tracking_url": "https://incubrix.com/solutions/growth-pipelines?utm_source=linkedin&utm_medium=video&utm_campaign=e2e_verification&utm_content=short_video_ast_li_v",
+      "source_id": "src_d666d9698238",
+      "evidence_references": [
+        {
+          "claim": "The initial 72 hours of user onboarding determine long-term enterprise retention.",
+          "source_quote": "The initial 72 hours of user onboarding determine long-term enterprise retention.",
+          "section_or_page": "1. The Critical Onboarding Window (\u00b61)",
+          "is_verified": true,
+          "verification_notes": null
+        }
+      ],
+      "review_required": false,
+      "review_notes": null,
+      "generation_method": "template",
+      "created_at": "2026-10-24T18:21:50.199030Z",
+      "status": "draft",
+      "duration_seconds": 45.0
+    },
+    {
+      "id": "ast_li_caro_7f1925f7",
+      "platform": "LinkedIn",
+      "content_format": "carousel",
+      "content_pillar": "Engineering Playbooks",
+      "audience_segment": "Technical Product Managers",
+      "hook": "The 5-Slide Technical Growth Architecture (Swipeable Guide)",
+      "main_content": "Slide 1 [Cover]: The Architecture Behind Growth Telemetry\nSlide 2 [Context]: Why unmonitored acquisition burns engineering bandwidth.\nSlide 3 [Core Finding]: The initial 72 hours of user onboarding determine long-term enterprise retention.\nSlide 4 [Implementation]: Teams that fail to instrument behavioral activation thresholds see 68% of new accounts go dormant within the first billing cycle.\nSlide 5 [Checklist]: Audit onboarding events, establish cohort tracking, review weekly.\nSlide 6 [Outro]: Save this slide deck for sprint planning.",
+      "caption": "Swipe through for the 5-step technical framework on growth telemetry.",
+      "hashtags": [
+        "#SaaSGrowth",
+        "#SoftwareEngineering",
+        "#ProductManagement",
+        "#Carousel"
+      ],
+      "call_to_action": "Save this carousel for your next product planning sprint.",
+      "tracking_url": "https://incubrix.com/solutions/growth-pipelines?utm_source=linkedin&utm_medium=carousel&utm_campaign=e2e_verification&utm_content=carousel_ast_li_c",
+      "source_id": "src_d666d9698238",
+      "evidence_references": [
+        {
+          "claim": "The initial 72 hours of user onboarding determine long-term enterprise retention.",
+          "source_quote": "The initial 72 hours of user onboarding determine long-term enterprise retention.",
+          "section_or_page": "1. The Critical Onboarding Window (\u00b61)",
+          "is_verified": true,
+          "verification_notes": null
+        },
+        {
+          "claim": "Teams that fail to instrument behavioral activation thresholds see 68% of new accounts go dormant within the first billing cycle.",
+          "source_quote": "Teams that fail to instrument behavioral activation thresholds see 68% of new accounts go dormant within the first billing cycle.",
+          "section_or_page": "1. The Critical Onboarding Window (\u00b61)",
+          "is_verified": true,
+          "verification_notes": null
+        }
+      ],
+      "review_required": false,
+      "review_notes": null,
+      "generation_method": "template",
+      "created_at": "2026-10-24T18:21:50.198906Z",
+      "status": "draft",
+      "duration_seconds": null
+    },
+    {
+      "id": "ast_li_text_186a70f2",
+      "platform": "LinkedIn",
+      "content_format": "text_post",
+      "content_pillar": "Growth Engineering Frameworks",
+      "audience_segment": "Technical Founders & Growth Engineers",
+      "hook": "Engineering leaders: The initial 72 hours of user onboarding determine long-term enterprise retention.",
+      "main_content": "Most early-stage teams attempt to scale acquisition too quickly.\n\nKey data points from our latest technical teardown:\n1. The initial 72 hours of user onboarding determine long-term enterprise retention.\n2. Teams that fail to instrument behavioral activation thresholds see 68% of new accounts go dormant within the first billing cycle.\n\nTelemetry loops must be established before capital is committed to expansion.",
+      "caption": "Key learnings from our technical architecture review. Details in the post.",
+      "hashtags": [
+        "#GrowthEngineering",
+        "#B2BTech",
+        "#ProductLedGrowth",
+        "#SaaSMetrics"
+      ],
+      "call_to_action": "How does your team instrument these telemetry loops? Share your thoughts below.",
+      "tracking_url": "https://incubrix.com/solutions/growth-pipelines?utm_source=linkedin&utm_medium=social_post&utm_campaign=e2e_verification&utm_content=text_post_ast_li_t",
+      "source_id": "src_d666d9698238",
+      "evidence_references": [
+        {
+          "claim": "The initial 72 hours of user onboarding determine long-term enterprise retention.",
+          "source_quote": "The initial 72 hours of user onboarding determine long-term enterprise retention.",
+          "section_or_page": "1. The Critical Onboarding Window (\u00b61)",
+          "is_verified": true,
+          "verification_notes": null
+        },
+        {
+          "claim": "Teams that fail to instrument behavioral activation thresholds see 68% of new accounts go dormant within the first billing cycle.",
+          "source_quote": "Teams that fail to instrument behavioral activation thresholds see 68% of new accounts go dormant within the first billing cycle.",
+          "section_or_page": "1. The Critical Onboarding Window (\u00b61)",
+          "is_verified": true,
+          "verification_notes": null
+        }
+      ],
+      "review_required": false,
+      "review_notes": null,
+      "generation_method": "template",
+      "created_at": "2026-10-24T18:21:50.198732Z",
+      "status": "draft",
+      "duration_seconds": null
+    }
+  ]
+}

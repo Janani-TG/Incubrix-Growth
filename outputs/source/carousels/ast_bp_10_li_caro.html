@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ast_bp_10_li_caro: Whitepaper to 12 Social Assets Matrix</title>
+  <style>
+    :root {
+      --bg: #111827;
+      --card-bg: #1F2937;
+      --border: #374151;
+      --emerald: #10B981;
+      --teal: #14B8A6;
+      --cyan: #38BDF8;
+      --purple: #8B5CF6;
+      --text-main: #F9FAFB;
+      --text-muted: #9CA3AF;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #030712;
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      gap: 30px;
+    }
+    .deck-header {
+      max-width: 600px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .deck-header h1 { font-size: 22px; color: var(--emerald); margin-bottom: 6px; }
+    .deck-header p { font-size: 13px; color: var(--text-muted); }
+
+    .slide {
+      width: 540px;
+      height: 675px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      overflow: hidden;
+    }
+    .slide::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, var(--emerald), var(--teal));
+    }
+    .slide-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--emerald);
+      text-transform: uppercase;
+      align-self: flex-start;
+    }
+    .slide-title {
+      font-size: 26px;
+      font-weight: 800;
+      line-height: 1.25;
+      color: #FFFFFF;
+      margin-top: 16px;
+      margin-bottom: 12px;
+    }
+    .slide-subtitle {
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--text-muted);
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      margin-top: 12px;
+    }
+    .card-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--emerald);
+      margin-bottom: 6px;
+    }
+    .card-body {
+      font-size: 12px;
+      line-height: 1.5;
+      color: #D1D5DB;
+    }
+    .matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 14px;
+      font-size: 11.5px;
+    }
+    .matrix-table th {
+      background: #111827;
+      color: var(--emerald);
+      text-align: left;
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--border);
+      font-weight: 700;
+    }
+    .matrix-table td {
+      padding: 8px 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      color: #E5E7EB;
+    }
+    .matrix-table tr:hover { background: rgba(255,255,255,0.02); }
+    .slide-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 14px;
+      font-size: 11px;
+      color: #6B7280;
+    }
+    .slide-num {
+      color: var(--emerald);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="deck-header">
+    <h1>ast_bp_10_li_caro • Slide Deck Specification</h1>
+    <p>6-Slide LinkedIn Document Carousel • Format: 1080x1350 • Pillar: Creator Workflows</p>
+  </div>
+
+  <!-- SLIDE 1 -->
+  <div class="slide" id="slide-1">
+    <div>
+      <div class="slide-badge">CONTENT REPURPOSING PLAYBOOK</div>
+      <h2 class="slide-title">Whitepaper to 12 Social Assets: The Matrix</h2>
+      <p class="slide-subtitle">Stop writing 10 separate posts from scratch. Here is how growth teams systematically extract high-density social assets from single technical source documents.</p>
+      
+      <div class="card" style="margin-top: 30px;">
+        <div class="card-title">WHAT THIS FRAMEWORK DELIVERS:</div>
+        <p class="card-body">
+          • 1 single technical whitepaper becomes 12 platform-native assets<br>
+          • 100% factual fidelity: every claim maps to an exact source quote<br>
+          • Deterministic schemas prevent tone drift and hallucination
+        </p>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span>IncuBrix Growth Framework</span>
+      <span class="slide-num">Swipe to explore matrix -> [1/6]</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 2 -->
+  <div class="slide" id="slide-2">
+    <div>
+      <div class="slide-badge" style="color: #F87171; border-color: rgba(248,113,113,0.3); background: rgba(248,113,113,0.1);">THE CONTENT BOTTLENECK</div>
+      <h2 class="slide-title">The Manual Repurposing Trap</h2>
+      <p class="slide-subtitle">Why traditional social content production breaks down at technical SaaS companies:</p>
+      
+      <div class="card">
+        <div class="card-title" style="color: #F87171;">1. Manual Rewrite Fatigue</div>
+        <p class="card-body">Engineers spend hours explaining features to marketers, who spend days rewording technical documentation into generic social updates.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title" style="color: #F87171;">2. Context Dilution</div>
+        <p class="card-body">Simplifying complex architectural concepts often removes the exact nuances that make technical buyers trust your product.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title" style="color: #F87171;">3. Format Laziness</div>
+        <p class="card-body">Copy-pasting identical text across LinkedIn, X, and YouTube ignores native platform algorithms and engagement mechanics.</p>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span>IncuBrix Growth Framework</span>
+      <span class="slide-num">[Slide 2/6]</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 3 -->
+  <div class="slide" id="slide-3">
+    <div>
+      <div class="slide-badge">STEP 1: FACT EXTRACTION</div>
+      <h2 class="slide-title">Deterministic Source Ingestion</h2>
+      <p class="slide-subtitle">Before generating a single headline, parse the source document into structured evidence:</p>
+      
+      <div class="card">
+        <div class="card-title">1. Structural Parsing</div>
+        <p class="card-body">Deconstruct the document into semantic units: titled sections, architectural lists, and data tables.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">2. Quantitative Metric Identification</div>
+        <p class="card-body">Detect benchmark percentages, latency thresholds, and throughput numbers with exact numeric boundaries.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">3. Verbatim Evidence Binding</div>
+        <p class="card-body">Store exact sentences as <code>EvidenceReference</code> objects so every generated claim can be audited against the original text.</p>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span>IncuBrix Growth Framework</span>
+      <span class="slide-num">[Slide 3/6]</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 4 -->
+  <div class="slide" id="slide-4">
+    <div>
+      <div class="slide-badge">STEP 2: PLATFORM MATRIX</div>
+      <h2 class="slide-title">The 12-Asset Multi-Channel Matrix</h2>
+      <p class="slide-subtitle">How a single source document maps into 12 native asset formats:</p>
+      
+      <table class="matrix-table">
+        <thead>
+          <tr>
+            <th>Platform</th>
+            <th>Format</th>
+            <th>Asset Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>LinkedIn</strong></td>
+            <td>Text Post</td>
+            <td>Technical teardown with framework breakdown</td>
+          </tr>
+          <tr>
+            <td><strong>LinkedIn</strong></td>
+            <td>Carousel PDF</td>
+            <td>5-slide visual architecture guide</td>
+          </tr>
+          <tr>
+            <td><strong>LinkedIn</strong></td>
+            <td>Short Video</td>
+            <td>50s executive briefing with screen walkthrough</td>
+          </tr>
+          <tr>
+            <td><strong>X / Twitter</strong></td>
+            <td>Thread</td>
+            <td>Metric-driven 3-tweet takeaway thread</td>
+          </tr>
+          <tr>
+            <td><strong>X / Twitter</strong></td>
+            <td>Graphic</td>
+            <td>1200x675 system pipeline diagram</td>
+          </tr>
+          <tr>
+            <td><strong>YouTube</strong></td>
+            <td>Short Video</td>
+            <td>45s rapid architectural teardown</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="slide-footer">
+      <span>IncuBrix Growth Framework</span>
+      <span class="slide-num">[Slide 4/6]</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 5 -->
+  <div class="slide" id="slide-5">
+    <div>
+      <div class="slide-badge" style="color: #38BDF8; border-color: rgba(56,189,248,0.3); background: rgba(56,189,248,0.1);">STEP 3: QUALITY GATES</div>
+      <h2 class="slide-title">The Pre-Publish Verification Gate</h2>
+      <p class="slide-subtitle">Never publish without verifying all 8 readiness criteria:</p>
+      
+      <div class="card">
+        <p class="card-body" style="font-size: 12.5px; line-height: 1.8;">
+          1. <strong>Hook Tested:</strong> Under 150 chars, clear value proposition.<br>
+          2. <strong>Evidence Checked:</strong> All numeric claims backed by source text.<br>
+          3. <strong>Rights Verified:</strong> Fonts and graphics licensed for commercial use.<br>
+          4. <strong>Active Tracking URL:</strong> Programmatic UTM parameters verified.<br>
+          5. <strong>Rendered File Present:</strong> MP4, PDF, or PNG exists on disk.<br>
+          6. <strong>Editable Source Preserved:</strong> Markdown or SVG available for revision.
+        </p>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span>IncuBrix Growth Framework</span>
+      <span class="slide-num">[Slide 5/6]</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 6 -->
+  <div class="slide" id="slide-6">
+    <div>
+      <div class="slide-badge">GET THE WORKFLOW</div>
+      <h2 class="slide-title">Deploy the Repurposing Matrix</h2>
+      <p class="slide-subtitle">Turn your technical docs into high-performing content engines without hiring an army of writers.</p>
+      
+      <div class="card" style="margin-top: 30px; background: #064E3B; border-color: var(--emerald);">
+        <div class="card-title" style="color: #6EE7B7;">FREE MATRIX TEMPLATE</div>
+        <p class="card-body" style="color: #E5E7EB;">
+          Download our complete Repurposing Matrix template, schema specifications, and automation scripts via the link in this post.
+        </p>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span>IncuBrix Growth Framework</span>
+      <span class="slide-num">Save this carousel • [6/6]</span>
+    </div>
+  </div>
+
+</body>
+</html>

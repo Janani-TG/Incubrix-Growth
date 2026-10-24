@@ -1,0 +1,262 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 1080 1350] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 1416 >>
+stream
+0.059 0.047 0.125 rg 0 0 1080 1350 re f
+0.659 0.333 0.969 rg 0 1342 1080 8 re f
+0.05 0.10 0.18 rg 80 1240 293 38 re f
+0.659 0.333 0.969 RG 1.5 w 80 1240 293 38 re s
+0.659 0.333 0.969 rg
+BT /F2 15 Tf 100 1252 Td (DATA INTEGRITY HANDBOOK) Tj ET
+1 1 1 rg
+BT /F2 42 Tf 80 1170 Td (The Growth Engineer's Data Hygiene) Tj ET
+BT /F2 42 Tf 80 1118 Td (Guide) Tj ET
+0.65 0.72 0.82 rg
+BT /F1 22 Tf 80 1056 Td (Bad telemetry data produces bad growth decisions. The) Tj ET
+BT /F1 22 Tf 80 1024 Td (6-step quarterly checklist to audit, clean, and protect) Tj ET
+BT /F1 22 Tf 80 992 Td (your event pipelines.) Tj ET
+0.08 0.11 0.18 rg 80 380 920 240 re f
+0.18 0.24 0.35 RG 1 w 80 380 920 240 re s
+0.659 0.333 0.969 rg 80 380 6 240 re f
+0.659 0.333 0.969 rg
+BT /F2 22 Tf 110 578 Td (WHAT THIS AUDIT COVERS:) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 540 Td (  - Schema strictness at the API boundary to prevent corrupted metrics) Tj ET
+BT /F1 18 Tf 110 512 Td (  - Orphan event pruning to reduce cloud analytics spend) Tj ET
+BT /F1 18 Tf 110 484 Td (  - Mandatory UTC timestamp normalization for accurate Day-1 cohorts) Tj ET
+BT /F1 18 Tf 110 456 Td (  - Programmatic lowercase UTM taxonomies and CSV formula injection defense) Tj ET
+0.15 0.20 0.30 RG 1 w 80 80 920 0 re s
+0.45 0.52 0.62 rg
+BT /F1 16 Tf 80 50 Td (IncuBrix Telemetry Playbook) Tj ET
+0.659 0.333 0.969 rg
+BT /F2 16 Tf 880 50 Td (Swipe to inspect audits -> [1/6]) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 1080 1350] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 1681 >>
+stream
+0.059 0.047 0.125 rg 0 0 1080 1350 re f
+0.659 0.333 0.969 rg 0 1342 1080 8 re f
+0.05 0.10 0.18 rg 80 1240 370 38 re f
+0.659 0.333 0.969 RG 1.5 w 80 1240 370 38 re s
+0.659 0.333 0.969 rg
+BT /F2 15 Tf 100 1252 Td (AUDIT 1 & 2: SCHEMAS & ORPHANS) Tj ET
+1 1 1 rg
+BT /F2 42 Tf 80 1170 Td (Edge Validation & Orphan Events) Tj ET
+0.65 0.72 0.82 rg
+BT /F1 22 Tf 80 1108 Td (Two structural audits to eliminate corrupt or unnecessary) Tj ET
+BT /F1 22 Tf 80 1076 Td (data before it enters your warehouse:) Tj ET
+0.08 0.11 0.18 rg 80 560 920 180 re f
+0.18 0.24 0.35 RG 1 w 80 560 920 180 re s
+0.659 0.333 0.969 rg 80 560 6 180 re f
+0.659 0.333 0.969 rg
+BT /F2 22 Tf 110 698 Td (Audit 1: Schema Enforcement at the Edge) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 660 Td (Problem: Flexible JSON schemas sound convenient until frontend sends strings where integers are expected.) Tj ET
+BT /F1 18 Tf 110 632 Td (Fix: Enforce strict Pydantic validation at the gateway. Quarantine malformed payloads before they reach DB.) Tj ET
+0.08 0.11 0.18 rg 80 340 920 180 re f
+0.18 0.24 0.35 RG 1 w 80 340 920 180 re s
+0.659 0.333 0.969 rg 80 340 6 180 re f
+0.659 0.333 0.969 rg
+BT /F2 22 Tf 110 478 Td (Audit 2: Orphan Event Pruning) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 440 Td (Problem: Deprecated features from 2024 still fire 50,000 events a day, inflating cloud analytics storage costs.) Tj ET
+BT /F1 18 Tf 110 412 Td (Fix: Query events with zero dashboard queries over 90 days. Safely sunset unused telemetry hooks.) Tj ET
+0.15 0.20 0.30 RG 1 w 80 80 920 0 re s
+0.45 0.52 0.62 rg
+BT /F1 16 Tf 80 50 Td (IncuBrix Telemetry Playbook) Tj ET
+0.659 0.333 0.969 rg
+BT /F2 16 Tf 880 50 Td ([Slide 2/6]) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 1080 1350] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R >>
+endobj
+10 0 obj
+<< /Length 1682 >>
+stream
+0.059 0.047 0.125 rg 0 0 1080 1350 re f
+0.220 0.740 0.970 rg 0 1342 1080 8 re f
+0.05 0.10 0.18 rg 80 1240 392 38 re f
+0.220 0.740 0.970 RG 1.5 w 80 1240 392 38 re s
+0.220 0.740 0.970 rg
+BT /F2 15 Tf 100 1252 Td (AUDIT 3 & 4: TIMESTAMPS & DEDUPE) Tj ET
+1 1 1 rg
+BT /F2 42 Tf 80 1170 Td (UTC Normalization & Idempotency) Tj ET
+0.65 0.72 0.82 rg
+BT /F1 22 Tf 80 1108 Td (Ensure cohort metrics and retention curves reflect true) Tj ET
+BT /F1 22 Tf 80 1076 Td (user activity across global timezones:) Tj ET
+0.08 0.11 0.18 rg 80 560 920 180 re f
+0.18 0.24 0.35 RG 1 w 80 560 920 180 re s
+0.220 0.740 0.970 rg 80 560 6 180 re f
+0.220 0.740 0.970 rg
+BT /F2 22 Tf 110 698 Td (Audit 3: Mandatory Server-Side UTC) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 660 Td (Problem: Client device clocks are frequently inaccurate or in local time, distorting Day-1 retention cohorts.) Tj ET
+BT /F1 18 Tf 110 632 Td (Fix: Assign ISO-8601 UTC timestamps at server ingestion time. Never trust client device clocks for ordering.) Tj ET
+0.08 0.11 0.18 rg 80 340 920 180 re f
+0.18 0.24 0.35 RG 1 w 80 340 920 180 re s
+0.220 0.740 0.970 rg 80 340 6 180 re f
+0.220 0.740 0.970 rg
+BT /F2 22 Tf 110 478 Td (Audit 4: Idempotent Event Deduplication) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 440 Td (Problem: Mobile network reconnects resend HTTP requests, double-counting signup conversions.) Tj ET
+BT /F1 18 Tf 110 412 Td (Fix: Generate deterministic SHA-256 fingerprints and enforce unique constraints in the analytics database.) Tj ET
+0.15 0.20 0.30 RG 1 w 80 80 920 0 re s
+0.45 0.52 0.62 rg
+BT /F1 16 Tf 80 50 Td (IncuBrix Telemetry Playbook) Tj ET
+0.220 0.740 0.970 rg
+BT /F2 16 Tf 880 50 Td ([Slide 3/6]) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 1080 1350] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 12 0 R >>
+endobj
+12 0 obj
+<< /Length 1678 >>
+stream
+0.059 0.047 0.125 rg 0 0 1080 1350 re f
+0.920 0.280 0.600 rg 0 1342 1080 8 re f
+0.05 0.10 0.18 rg 80 1240 348 38 re f
+0.920 0.280 0.600 RG 1.5 w 80 1240 348 38 re s
+0.920 0.280 0.600 rg
+BT /F2 15 Tf 100 1252 Td (AUDIT 5 & 6: UTMS & SECURITY) Tj ET
+1 1 1 rg
+BT /F2 42 Tf 80 1170 Td (UTM Taxonomies & Injection Defense) Tj ET
+0.65 0.72 0.82 rg
+BT /F1 22 Tf 80 1108 Td (Protect your attribution reporting integrity and) Tj ET
+BT /F1 22 Tf 80 1076 Td (downstream spreadsheet consumers:) Tj ET
+0.08 0.11 0.18 rg 80 560 920 180 re f
+0.18 0.24 0.35 RG 1 w 80 560 920 180 re s
+0.920 0.280 0.600 rg 80 560 6 180 re f
+0.920 0.280 0.600 rg
+BT /F2 22 Tf 110 698 Td (Audit 5: Programmatic Lowercase UTMs) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 660 Td (Problem: Inconsistent casing like utm_source=LinkedIn vs linkedin splits attribution into disjoint buckets.) Tj ET
+BT /F1 18 Tf 110 632 Td (Fix: Enforce strict lowercase transforms and validated platform enums in all programmatic link builders.) Tj ET
+0.08 0.11 0.18 rg 80 340 920 180 re f
+0.18 0.24 0.35 RG 1 w 80 340 920 180 re s
+0.920 0.280 0.600 rg 80 340 6 180 re f
+0.920 0.280 0.600 rg
+BT /F2 22 Tf 110 478 Td (Audit 6: CSV Formula Injection Protection) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 440 Td (Problem: Telemetry values starting with =, +, -, or @ can execute arbitrary formulas in spreadsheet applications.) Tj ET
+BT /F1 18 Tf 110 412 Td (Fix: Sanitize exports by prefixing potentially dangerous leading characters with a single quote.) Tj ET
+0.15 0.20 0.30 RG 1 w 80 80 920 0 re s
+0.45 0.52 0.62 rg
+BT /F1 16 Tf 80 50 Td (IncuBrix Telemetry Playbook) Tj ET
+0.920 0.280 0.600 rg
+BT /F2 16 Tf 880 50 Td ([Slide 4/6]) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 1080 1350] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 14 0 R >>
+endobj
+14 0 obj
+<< /Length 1365 >>
+stream
+0.059 0.047 0.125 rg 0 0 1080 1350 re f
+0.220 0.740 0.970 rg 0 1342 1080 8 re f
+0.05 0.10 0.18 rg 80 1240 249 38 re f
+0.220 0.740 0.970 RG 1.5 w 80 1240 249 38 re s
+0.220 0.740 0.970 rg
+BT /F2 15 Tf 100 1252 Td (DATA HEALTH COCKPIT) Tj ET
+1 1 1 rg
+BT /F2 42 Tf 80 1170 Td (Automated Telemetry Health) Tj ET
+BT /F2 42 Tf 80 1118 Td (Monitoring) Tj ET
+0.65 0.72 0.82 rg
+BT /F1 22 Tf 80 1056 Td (Configure automated alerts to catch pipeline anomalies) Tj ET
+BT /F1 22 Tf 80 1024 Td (before stakeholders notice:) Tj ET
+0.08 0.11 0.18 rg 80 440 920 240 re f
+0.18 0.24 0.35 RG 1 w 80 440 920 240 re s
+0.220 0.740 0.970 rg 80 440 6 240 re f
+0.220 0.740 0.970 rg
+BT /F2 22 Tf 110 638 Td (CRITICAL ALERT THRESHOLDS) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 600 Td (  - Event Volume Drops: Alert if hourly volume falls > 30% below 7-day rolling average) Tj ET
+BT /F1 18 Tf 110 572 Td (  - Schema Rejection Rate: Alert if malformed payload rate exceeds 0.5% of total traffic) Tj ET
+BT /F1 18 Tf 110 544 Td (  - Ingestion Latency: Alert if P99 edge gateway response exceeds 50ms) Tj ET
+BT /F1 18 Tf 110 516 Td (  - Queue Backlog: Alert if consumer message queue exceeds 10,000 pending events) Tj ET
+0.15 0.20 0.30 RG 1 w 80 80 920 0 re s
+0.45 0.52 0.62 rg
+BT /F1 16 Tf 80 50 Td (IncuBrix Telemetry Playbook) Tj ET
+0.220 0.740 0.970 rg
+BT /F2 16 Tf 880 50 Td ([Slide 5/6]) Tj ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 1080 1350] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 16 0 R >>
+endobj
+16 0 obj
+<< /Length 1143 >>
+stream
+0.059 0.047 0.125 rg 0 0 1080 1350 re f
+0.659 0.333 0.969 rg 0 1342 1080 8 re f
+0.05 0.10 0.18 rg 80 1240 227 38 re f
+0.659 0.333 0.969 RG 1.5 w 80 1240 227 38 re s
+0.659 0.333 0.969 rg
+BT /F2 15 Tf 100 1252 Td (QUARTERLY HYGIENE) Tj ET
+1 1 1 rg
+BT /F2 42 Tf 80 1170 Td (Run Your Quarterly Data Audit) Tj ET
+0.65 0.72 0.82 rg
+BT /F1 22 Tf 80 1108 Td (Clean data is a competitive advantage. Instrument) Tj ET
+BT /F1 22 Tf 80 1076 Td (pipelines that engineering and leadership can trust) Tj ET
+BT /F1 22 Tf 80 1044 Td (implicitly.) Tj ET
+0.08 0.11 0.18 rg 80 480 920 200 re f
+0.18 0.24 0.35 RG 1 w 80 480 920 200 re s
+0.659 0.333 0.969 rg 80 480 6 200 re f
+0.659 0.333 0.969 rg
+BT /F2 22 Tf 110 638 Td (DOWNLOAD THE DATA HYGIENE GUIDE) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 600 Td (Get our comprehensive 6-step checklist, SQL audit queries, and CSV sanitization snippets) Tj ET
+BT /F1 18 Tf 110 572 Td (via the verified link in this post.) Tj ET
+0.15 0.20 0.30 RG 1 w 80 80 920 0 re s
+0.45 0.52 0.62 rg
+BT /F1 16 Tf 80 50 Td (IncuBrix Telemetry Playbook) Tj ET
+0.659 0.333 0.969 rg
+BT /F2 16 Tf 880 50 Td (Save for next quarter - [6/6]) Tj ET
+endstream
+endobj
+xref
+0 17
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000154 00000 n 
+0000000224 00000 n 
+0000000299 00000 n 
+0000000437 00000 n 
+0000001905 00000 n 
+0000002043 00000 n 
+0000003776 00000 n 
+0000003915 00000 n 
+0000005650 00000 n 
+0000005790 00000 n 
+0000007521 00000 n 
+0000007661 00000 n 
+0000009079 00000 n 
+0000009219 00000 n 
+trailer
+<< /Size 17 /Root 1 0 R >>
+startxref
+10415
+%%EOF

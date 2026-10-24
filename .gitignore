@@ -1,0 +1,41 @@
+﻿# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.env.local
+
+# Local databases and storage
+*.db
+*.sqlite
+*.sqlite3
+
+# Generated outputs: keep deliverable assets tracked
+# Ignore only temporary files
+outputs/**/.DS_Store
+outputs/**/Thumbs.db
+outputs/**/*.tmp
+
+# IDE and OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+Thumbs.db
+Desktop.ini
+.DS_Store

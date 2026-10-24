@@ -1,0 +1,281 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 1080 1350] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 1470 >>
+stream
+0.067 0.094 0.153 rg 0 0 1080 1350 re f
+0.063 0.725 0.506 rg 0 1342 1080 8 re f
+0.05 0.10 0.18 rg 80 1240 348 38 re f
+0.063 0.725 0.506 RG 1.5 w 80 1240 348 38 re s
+0.063 0.725 0.506 rg
+BT /F2 15 Tf 100 1252 Td (CONTENT REPURPOSING PLAYBOOK) Tj ET
+1 1 1 rg
+BT /F2 42 Tf 80 1170 Td (Whitepaper to 12 Social Assets: The) Tj ET
+BT /F2 42 Tf 80 1118 Td (Matrix) Tj ET
+0.65 0.72 0.82 rg
+BT /F1 22 Tf 80 1056 Td (Stop writing 10 separate posts from scratch. Here is how) Tj ET
+BT /F1 22 Tf 80 1024 Td (growth teams systematically extract high-density social) Tj ET
+BT /F1 22 Tf 80 992 Td (assets from single technical source documents.) Tj ET
+0.08 0.11 0.18 rg 80 380 920 240 re f
+0.18 0.24 0.35 RG 1 w 80 380 920 240 re s
+0.063 0.725 0.506 rg 80 380 6 240 re f
+0.063 0.725 0.506 rg
+BT /F2 22 Tf 110 578 Td (WHAT THIS FRAMEWORK DELIVERS:) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 540 Td (  - 1 single technical whitepaper generates 12 platform-native assets) Tj ET
+BT /F1 18 Tf 110 512 Td (  - 100% factual fidelity: every claim is linked to an exact source citation) Tj ET
+BT /F1 18 Tf 110 484 Td (  - Deterministic schemas prevent tone drift and generative hallucinations) Tj ET
+BT /F1 18 Tf 110 456 Td (  - Strict platform adaptation preserves native algorithmic reach) Tj ET
+0.15 0.20 0.30 RG 1 w 80 80 920 0 re s
+0.45 0.52 0.62 rg
+BT /F1 16 Tf 80 50 Td (IncuBrix Growth Framework) Tj ET
+0.063 0.725 0.506 rg
+BT /F2 16 Tf 880 50 Td (Swipe to explore matrix -> [1/6]) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 1080 1350] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 1890 >>
+stream
+0.067 0.094 0.153 rg 0 0 1080 1350 re f
+0.970 0.440 0.440 rg 0 1342 1080 8 re f
+0.05 0.10 0.18 rg 80 1240 282 38 re f
+0.970 0.440 0.440 RG 1.5 w 80 1240 282 38 re s
+0.970 0.440 0.440 rg
+BT /F2 15 Tf 100 1252 Td (THE CONTENT BOTTLENECK) Tj ET
+1 1 1 rg
+BT /F2 42 Tf 80 1170 Td (The Manual Repurposing Trap) Tj ET
+0.65 0.72 0.82 rg
+BT /F1 22 Tf 80 1108 Td (Why traditional social content production breaks down at) Tj ET
+BT /F1 22 Tf 80 1076 Td (technical SaaS companies:) Tj ET
+0.08 0.11 0.18 rg 80 680 920 150 re f
+0.18 0.24 0.35 RG 1 w 80 680 920 150 re s
+0.970 0.440 0.440 rg 80 680 6 150 re f
+0.970 0.440 0.440 rg
+BT /F2 22 Tf 110 788 Td (1. Manual Rewrite Fatigue) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 750 Td (Engineers spend hours explaining features to marketers, who spend days) Tj ET
+BT /F1 18 Tf 110 722 Td (rewording technical documentation into generic social updates.) Tj ET
+0.08 0.11 0.18 rg 80 490 920 150 re f
+0.18 0.24 0.35 RG 1 w 80 490 920 150 re s
+0.970 0.440 0.440 rg 80 490 6 150 re f
+0.970 0.440 0.440 rg
+BT /F2 22 Tf 110 598 Td (2. Context Dilution) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 560 Td (Simplifying complex architectural concepts often removes the exact technical nuances) Tj ET
+BT /F1 18 Tf 110 532 Td (that make senior developers and technical founders trust your product.) Tj ET
+0.08 0.11 0.18 rg 80 300 920 150 re f
+0.18 0.24 0.35 RG 1 w 80 300 920 150 re s
+0.970 0.440 0.440 rg 80 300 6 150 re f
+0.970 0.440 0.440 rg
+BT /F2 22 Tf 110 408 Td (3. Format Laziness) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 370 Td (Copy-pasting identical text across LinkedIn, X, and YouTube ignores native) Tj ET
+BT /F1 18 Tf 110 342 Td (platform algorithms and engagement mechanics.) Tj ET
+0.15 0.20 0.30 RG 1 w 80 80 920 0 re s
+0.45 0.52 0.62 rg
+BT /F1 16 Tf 80 50 Td (IncuBrix Growth Framework) Tj ET
+0.970 0.440 0.440 rg
+BT /F2 16 Tf 880 50 Td ([Slide 2/6]) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 1080 1350] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R >>
+endobj
+10 0 obj
+<< /Length 1880 >>
+stream
+0.067 0.094 0.153 rg 0 0 1080 1350 re f
+0.063 0.725 0.506 rg 0 1342 1080 8 re f
+0.05 0.10 0.18 rg 80 1240 293 38 re f
+0.063 0.725 0.506 RG 1.5 w 80 1240 293 38 re s
+0.063 0.725 0.506 rg
+BT /F2 15 Tf 100 1252 Td (STEP 1: FACT EXTRACTION) Tj ET
+1 1 1 rg
+BT /F2 42 Tf 80 1170 Td (Deterministic Source Ingestion) Tj ET
+0.65 0.72 0.82 rg
+BT /F1 22 Tf 80 1108 Td (Before generating a single headline, parse the source) Tj ET
+BT /F1 22 Tf 80 1076 Td (document into structured evidence:) Tj ET
+0.08 0.11 0.18 rg 80 680 920 150 re f
+0.18 0.24 0.35 RG 1 w 80 680 920 150 re s
+0.063 0.725 0.506 rg 80 680 6 150 re f
+0.063 0.725 0.506 rg
+BT /F2 22 Tf 110 788 Td (1. Structural Parsing) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 750 Td (Deconstruct the technical document into semantic units: titled sections, architectural lists,) Tj ET
+BT /F1 18 Tf 110 722 Td (and quantitative benchmark tables.) Tj ET
+0.08 0.11 0.18 rg 80 490 920 150 re f
+0.18 0.24 0.35 RG 1 w 80 490 920 150 re s
+0.063 0.725 0.506 rg 80 490 6 150 re f
+0.063 0.725 0.506 rg
+BT /F2 22 Tf 110 598 Td (2. Metric Boundary Detection) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 560 Td (Flag benchmark percentages, latency thresholds \(< 15ms\), and throughput numbers) Tj ET
+BT /F1 18 Tf 110 532 Td (with explicit verification requirements.) Tj ET
+0.08 0.11 0.18 rg 80 300 920 150 re f
+0.18 0.24 0.35 RG 1 w 80 300 920 150 re s
+0.063 0.725 0.506 rg 80 300 6 150 re f
+0.063 0.725 0.506 rg
+BT /F2 22 Tf 110 408 Td (3. Verbatim Evidence Binding) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 370 Td (Store exact sentences as EvidenceReference models so every generated claim can be) Tj ET
+BT /F1 18 Tf 110 342 Td (audited against the original source text.) Tj ET
+0.15 0.20 0.30 RG 1 w 80 80 920 0 re s
+0.45 0.52 0.62 rg
+BT /F1 16 Tf 80 50 Td (IncuBrix Growth Framework) Tj ET
+0.063 0.725 0.506 rg
+BT /F2 16 Tf 880 50 Td ([Slide 3/6]) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 1080 1350] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 12 0 R >>
+endobj
+12 0 obj
+<< /Length 1891 >>
+stream
+0.067 0.094 0.153 rg 0 0 1080 1350 re f
+0.220 0.740 0.970 rg 0 1342 1080 8 re f
+0.05 0.10 0.18 rg 80 1240 293 38 re f
+0.220 0.740 0.970 RG 1.5 w 80 1240 293 38 re s
+0.220 0.740 0.970 rg
+BT /F2 15 Tf 100 1252 Td (STEP 2: PLATFORM MATRIX) Tj ET
+1 1 1 rg
+BT /F2 42 Tf 80 1170 Td (The 12-Asset Multi-Channel Matrix) Tj ET
+0.65 0.72 0.82 rg
+BT /F1 22 Tf 80 1108 Td (How a single technical source document maps into 12 native) Tj ET
+BT /F1 22 Tf 80 1076 Td (asset formats:) Tj ET
+0.08 0.11 0.18 rg 80 580 920 240 re f
+0.18 0.24 0.35 RG 1 w 80 580 920 240 re s
+0.220 0.740 0.970 rg 80 580 6 240 re f
+0.220 0.740 0.970 rg
+BT /F2 22 Tf 110 778 Td (LINKEDIN & X ASSETS) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 740 Td (  - LinkedIn Text Post: Deep-dive framework teardown \(1,200 - 1,800 chars\)) Tj ET
+BT /F1 18 Tf 110 712 Td (  - LinkedIn Carousel: 5-to-6 slide high-contrast PDF architecture guide) Tj ET
+BT /F1 18 Tf 110 684 Td (  - LinkedIn Video: 50s executive briefing with product walkthrough) Tj ET
+BT /F1 18 Tf 110 656 Td (  - X / Twitter Thread: 3-tweet metric takeaway thread \(<= 280 chars/tweet\)) Tj ET
+BT /F1 18 Tf 110 628 Td (  - X / Twitter Graphic: 1200x675 px dark-mode system diagram) Tj ET
+0.08 0.11 0.18 rg 80 340 920 200 re f
+0.18 0.24 0.35 RG 1 w 80 340 920 200 re s
+0.220 0.740 0.970 rg 80 340 6 200 re f
+0.220 0.740 0.970 rg
+BT /F2 22 Tf 110 498 Td (VIDEO & COMMUNITY ASSETS) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 460 Td (  - YouTube Shorts: 45s rapid architectural teardown with code overlays) Tj ET
+BT /F1 18 Tf 110 432 Td (  - Instagram Carousel: 5-slide visual tactical workflow guide) Tj ET
+BT /F1 18 Tf 110 404 Td (  - Developer Forum: Technical discussion post with benchmark code) Tj ET
+0.15 0.20 0.30 RG 1 w 80 80 920 0 re s
+0.45 0.52 0.62 rg
+BT /F1 16 Tf 80 50 Td (IncuBrix Growth Framework) Tj ET
+0.220 0.740 0.970 rg
+BT /F2 16 Tf 880 50 Td ([Slide 4/6]) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 1080 1350] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 14 0 R >>
+endobj
+14 0 obj
+<< /Length 1464 >>
+stream
+0.067 0.094 0.153 rg 0 0 1080 1350 re f
+0.660 0.330 0.970 rg 0 1342 1080 8 re f
+0.05 0.10 0.18 rg 80 1240 271 38 re f
+0.660 0.330 0.970 RG 1.5 w 80 1240 271 38 re s
+0.660 0.330 0.970 rg
+BT /F2 15 Tf 100 1252 Td (STEP 3: QUALITY GATES) Tj ET
+1 1 1 rg
+BT /F2 42 Tf 80 1170 Td (The Pre-Publish Verification Gate) Tj ET
+0.65 0.72 0.82 rg
+BT /F1 22 Tf 80 1108 Td (Never publish without verifying all 8 readiness criteria:) Tj ET
+0.08 0.11 0.18 rg 80 440 920 280 re f
+0.18 0.24 0.35 RG 1 w 80 440 920 280 re s
+0.660 0.330 0.970 rg 80 440 6 280 re f
+0.660 0.330 0.970 rg
+BT /F2 22 Tf 110 678 Td (MANDATORY VERIFICATION CHECKLIST) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 640 Td (  [X] Hook Tested: Under 150 characters with clear value proposition) Tj ET
+BT /F1 18 Tf 110 612 Td (  [X] Evidence Checked: All technical claims supported by source text citations) Tj ET
+BT /F1 18 Tf 110 584 Td (  [X] Rights Verified: Commercial licenses confirmed for all design assets) Tj ET
+BT /F1 18 Tf 110 556 Td (  [X] Active Tracking Link: Programmatic UTM parameters verified and resolved) Tj ET
+BT /F1 18 Tf 110 528 Td (  [X] Rendered File Present: MP4, PDF, or PNG file verified on disk) Tj ET
+BT /F1 18 Tf 110 500 Td (  [X] Editable Source Preserved: Markdown, SVG, or HTML available for revision) Tj ET
+0.15 0.20 0.30 RG 1 w 80 80 920 0 re s
+0.45 0.52 0.62 rg
+BT /F1 16 Tf 80 50 Td (IncuBrix Growth Framework) Tj ET
+0.660 0.330 0.970 rg
+BT /F2 16 Tf 880 50 Td ([Slide 5/6]) Tj ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 1080 1350] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 16 0 R >>
+endobj
+16 0 obj
+<< /Length 1109 >>
+stream
+0.067 0.094 0.153 rg 0 0 1080 1350 re f
+0.063 0.725 0.506 rg 0 1342 1080 8 re f
+0.05 0.10 0.18 rg 80 1240 216 38 re f
+0.063 0.725 0.506 RG 1.5 w 80 1240 216 38 re s
+0.063 0.725 0.506 rg
+BT /F2 15 Tf 100 1252 Td (GET THE WORKFLOW) Tj ET
+1 1 1 rg
+BT /F2 42 Tf 80 1170 Td (Deploy the Repurposing Matrix) Tj ET
+0.65 0.72 0.82 rg
+BT /F1 22 Tf 80 1108 Td (Turn your technical documentation into a scalable content) Tj ET
+BT /F1 22 Tf 80 1076 Td (engine without hiring an army of writers.) Tj ET
+0.08 0.11 0.18 rg 80 480 920 200 re f
+0.18 0.24 0.35 RG 1 w 80 480 920 200 re s
+0.063 0.725 0.506 rg 80 480 6 200 re f
+0.063 0.725 0.506 rg
+BT /F2 22 Tf 110 638 Td (FREE REPURPOSING MATRIX TEMPLATE) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 600 Td (Download our complete Repurposing Matrix template, schema specifications, and automated) Tj ET
+BT /F1 18 Tf 110 572 Td (ingestion scripts via the verified link in this post.) Tj ET
+0.15 0.20 0.30 RG 1 w 80 80 920 0 re s
+0.45 0.52 0.62 rg
+BT /F1 16 Tf 80 50 Td (IncuBrix Growth Framework) Tj ET
+0.063 0.725 0.506 rg
+BT /F2 16 Tf 880 50 Td (Save this carousel - [6/6]) Tj ET
+endstream
+endobj
+xref
+0 17
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000154 00000 n 
+0000000224 00000 n 
+0000000299 00000 n 
+0000000437 00000 n 
+0000001959 00000 n 
+0000002097 00000 n 
+0000004039 00000 n 
+0000004178 00000 n 
+0000006111 00000 n 
+0000006251 00000 n 
+0000008195 00000 n 
+0000008335 00000 n 
+0000009852 00000 n 
+0000009992 00000 n 
+trailer
+<< /Size 17 /Root 1 0 R >>
+startxref
+11154
+%%EOF

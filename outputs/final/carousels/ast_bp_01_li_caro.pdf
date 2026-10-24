@@ -1,0 +1,241 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R] /Count 5 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 1080 1350] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 1501 >>
+stream
+0.043 0.059 0.098 rg 0 0 1080 1350 re f
+0.220 0.740 0.970 rg 0 1342 1080 8 re f
+0.05 0.10 0.18 rg 80 1240 359 38 re f
+0.220 0.740 0.970 RG 1.5 w 80 1240 359 38 re s
+0.220 0.740 0.970 rg
+BT /F2 15 Tf 100 1252 Td (SYSTEM ARCHITECTURE BREAKDOWN) Tj ET
+1 1 1 rg
+BT /F2 42 Tf 80 1170 Td (The 5-Slide Technical Growth) Tj ET
+BT /F2 42 Tf 80 1118 Td (Telemetry Architecture) Tj ET
+0.65 0.72 0.82 rg
+BT /F1 22 Tf 80 1056 Td (Most B2B SaaS growth funnels leak data before they ever) Tj ET
+BT /F1 22 Tf 80 1024 Td (leak revenue. Here is how high-scale teams instrument) Tj ET
+BT /F1 22 Tf 80 992 Td (resilient, non-blocking telemetry pipelines.) Tj ET
+0.08 0.11 0.18 rg 80 380 920 240 re f
+0.18 0.24 0.35 RG 1 w 80 380 920 240 re s
+0.220 0.740 0.970 rg 80 380 6 240 re f
+0.220 0.740 0.970 rg
+BT /F2 22 Tf 110 578 Td (WHAT THIS ARCHITECTURE DELIVERS:) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 540 Td (  - Eliminates user-facing lag during analytics tracking via async HTTP 202 gateway) Tj ET
+BT /F1 18 Tf 110 512 Td (  - Prevents ad-blocker event interception through server-side ingestion) Tj ET
+BT /F1 18 Tf 110 484 Td (  - Blocks duplicate conversion metrics using SHA-256 event fingerprints) Tj ET
+BT /F1 18 Tf 110 456 Td (  - Buffers high-throughput campaign traffic spikes with distributed queues) Tj ET
+0.15 0.20 0.30 RG 1 w 80 80 920 0 re s
+0.45 0.52 0.62 rg
+BT /F1 16 Tf 80 50 Td (IncuBrix Growth Engineering Blueprint) Tj ET
+0.220 0.740 0.970 rg
+BT /F2 16 Tf 880 50 Td (Swipe to inspect -> [1/5]) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 1080 1350] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 1961 >>
+stream
+0.043 0.059 0.098 rg 0 0 1080 1350 re f
+0.970 0.440 0.440 rg 0 1342 1080 8 re f
+0.05 0.10 0.18 rg 80 1240 436 38 re f
+0.970 0.440 0.440 RG 1.5 w 80 1240 436 38 re s
+0.970 0.440 0.440 rg
+BT /F2 15 Tf 100 1252 Td (PHASE 1: THE INGESTION VULNERABILITY) Tj ET
+1 1 1 rg
+BT /F2 42 Tf 80 1170 Td (The Client-Side Telemetry Trap) Tj ET
+0.65 0.72 0.82 rg
+BT /F1 22 Tf 80 1108 Td (Why traditional client-side JavaScript analytics fails in) Tj ET
+BT /F1 22 Tf 80 1076 Td (modern SaaS production environments:) Tj ET
+0.08 0.11 0.18 rg 80 680 920 150 re f
+0.18 0.24 0.35 RG 1 w 80 680 920 150 re s
+0.970 0.440 0.440 rg 80 680 6 150 re f
+0.970 0.440 0.440 rg
+BT /F2 22 Tf 110 788 Td (1. Ad Blocker Interception) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 750 Td (15-25% of client tracking events silently fail to reach third-party endpoints) Tj ET
+BT /F1 18 Tf 110 722 Td (due to browser privacy extensions and DNS-level ad blockers.) Tj ET
+0.08 0.11 0.18 rg 80 490 920 150 re f
+0.18 0.24 0.35 RG 1 w 80 490 920 150 re s
+0.970 0.440 0.440 rg 80 490 6 150 re f
+0.970 0.440 0.440 rg
+BT /F2 22 Tf 110 598 Td (2. Uncontrolled Schema Drift) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 560 Td (Frontend refactors rename buttons or drop user properties, silently breaking) Tj ET
+BT /F1 18 Tf 110 532 Td (downstream conversion funnels without triggering compiler or CI errors.) Tj ET
+0.08 0.11 0.18 rg 80 300 920 150 re f
+0.18 0.24 0.35 RG 1 w 80 300 920 150 re s
+0.970 0.440 0.440 rg 80 300 6 150 re f
+0.970 0.440 0.440 rg
+BT /F2 22 Tf 110 408 Td (3. Double-Counted Conversions) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 370 Td (Mobile connection retries resend registration calls, double-counting signups) Tj ET
+BT /F1 18 Tf 110 342 Td (and distorting Day-1 retention cohorts in your data warehouse.) Tj ET
+0.15 0.20 0.30 RG 1 w 80 80 920 0 re s
+0.45 0.52 0.62 rg
+BT /F1 16 Tf 80 50 Td (IncuBrix Engineering Playbook) Tj ET
+0.970 0.440 0.440 rg
+BT /F2 16 Tf 880 50 Td ([Slide 2/5]) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 1080 1350] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R >>
+endobj
+10 0 obj
+<< /Length 1678 >>
+stream
+0.043 0.059 0.098 rg 0 0 1080 1350 re f
+0.220 0.740 0.970 rg 0 1342 1080 8 re f
+0.05 0.10 0.18 rg 80 1240 414 38 re f
+0.220 0.740 0.970 RG 1.5 w 80 1240 414 38 re s
+0.220 0.740 0.970 rg
+BT /F2 15 Tf 100 1252 Td (PHASE 2: NON-BLOCKING EVENT STREAM) Tj ET
+1 1 1 rg
+BT /F2 42 Tf 80 1170 Td (Asynchronous Ingestion Architecture) Tj ET
+0.65 0.72 0.82 rg
+BT /F1 22 Tf 80 1108 Td (Decouple user response latency from analytical processing) Tj ET
+BT /F1 22 Tf 80 1076 Td (with a distributed event queue:) Tj ET
+0.04 0.06 0.10 rg 80 610 920 180 re f
+0.15 0.20 0.30 RG 1 w 80 610 920 180 re s
+0.220 0.740 0.970 rg
+BT /F1 17 Tf 110 752 Td (Client Action \(HTTP POST\)) Tj ET
+BT /F1 17 Tf 110 726 Td (  |--> Edge Gateway \(FastAPI / Envoy\) -> Returns HTTP 202 in < 15ms) Tj ET
+BT /F1 17 Tf 110 700 Td (         |--> Distributed Queue \(Redis Stream / SQS FIFO\)) Tj ET
+BT /F1 17 Tf 110 674 Td (                |--> Worker Engine \(Pydantic Schema Check & Dedupe\)) Tj ET
+BT /F1 17 Tf 110 648 Td (                       |--> Analytics DB \(PostgreSQL / ClickHouse\)) Tj ET
+0.08 0.11 0.18 rg 80 380 920 180 re f
+0.18 0.24 0.35 RG 1 w 80 380 920 180 re s
+0.220 0.740 0.970 rg 80 380 6 180 re f
+0.220 0.740 0.970 rg
+BT /F2 22 Tf 110 518 Td (LATENCY GUARDRAIL) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 480 Td (The edge gateway accepts events and immediately replies with HTTP 202 Accepted.) Tj ET
+BT /F1 18 Tf 110 452 Td (User checkout and signup flows are never held hostage by analytics database latency.) Tj ET
+0.15 0.20 0.30 RG 1 w 80 80 920 0 re s
+0.45 0.52 0.62 rg
+BT /F1 16 Tf 80 50 Td (IncuBrix Engineering Playbook) Tj ET
+0.220 0.740 0.970 rg
+BT /F2 16 Tf 880 50 Td ([Slide 3/5]) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 1080 1350] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 12 0 R >>
+endobj
+12 0 obj
+<< /Length 1553 >>
+stream
+0.043 0.059 0.098 rg 0 0 1080 1350 re f
+0.980 0.750 0.150 rg 0 1342 1080 8 re f
+0.05 0.10 0.18 rg 80 1240 359 38 re f
+0.980 0.750 0.150 RG 1.5 w 80 1240 359 38 re s
+0.980 0.750 0.150 rg
+BT /F2 15 Tf 100 1252 Td (PHASE 3: IDEMPOTENT RECORDING) Tj ET
+1 1 1 rg
+BT /F2 42 Tf 80 1170 Td (SHA-256 Fingerprint Deduplication) Tj ET
+0.65 0.72 0.82 rg
+BT /F1 22 Tf 80 1108 Td (Guarantee exact-once recording semantics across all cohort) Tj ET
+BT /F1 22 Tf 80 1076 Td (analysis tables:) Tj ET
+0.04 0.06 0.10 rg 80 630 920 150 re f
+0.15 0.20 0.30 RG 1 w 80 630 920 150 re s
+0.980 0.750 0.150 rg
+BT /F1 17 Tf 110 742 Td (def compute_fingerprint\(event: TelemetryPayload\) -> str:) Tj ET
+BT /F1 17 Tf 110 716 Td (    raw = f"{event.user_id}|{event.name}|{event.utc_ts}") Tj ET
+BT /F1 17 Tf 110 690 Td (    return hashlib.sha256\(raw.encode\(\)\).hexdigest\(\)) Tj ET
+0.08 0.11 0.18 rg 80 380 920 200 re f
+0.18 0.24 0.35 RG 1 w 80 380 920 200 re s
+0.980 0.750 0.150 rg 80 380 6 200 re f
+0.980 0.750 0.150 rg
+BT /F2 22 Tf 110 538 Td (DATABASE UNIQUENESS CONSTRAINT) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 500 Td (A composite unique index on \(fingerprint\) ensures that duplicate network dispatches) Tj ET
+BT /F1 18 Tf 110 472 Td (are safely ignored at the database layer without throwing unhandled exceptions) Tj ET
+BT /F1 18 Tf 110 444 Td (or inflating analytical event counts.) Tj ET
+0.15 0.20 0.30 RG 1 w 80 80 920 0 re s
+0.45 0.52 0.62 rg
+BT /F1 16 Tf 80 50 Td (IncuBrix Engineering Playbook) Tj ET
+0.980 0.750 0.150 rg
+BT /F2 16 Tf 880 50 Td ([Slide 4/5]) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 1080 1350] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 14 0 R >>
+endobj
+14 0 obj
+<< /Length 1732 >>
+stream
+0.043 0.059 0.098 rg 0 0 1080 1350 re f
+0.200 0.830 0.600 rg 0 1342 1080 8 re f
+0.05 0.10 0.18 rg 80 1240 260 38 re f
+0.200 0.830 0.600 RG 1.5 w 80 1240 260 38 re s
+0.200 0.830 0.600 rg
+BT /F2 15 Tf 100 1252 Td (PRODUCTION READINESS) Tj ET
+1 1 1 rg
+BT /F2 42 Tf 80 1170 Td (The Telemetry Audit Checklist) Tj ET
+0.65 0.72 0.82 rg
+BT /F1 22 Tf 80 1108 Td (Four mandatory checks before deploying growth telemetry) Tj ET
+BT /F1 22 Tf 80 1076 Td (pipelines to production:) Tj ET
+0.08 0.11 0.18 rg 80 520 920 240 re f
+0.18 0.24 0.35 RG 1 w 80 520 920 240 re s
+0.200 0.830 0.600 rg 80 520 6 240 re f
+0.200 0.830 0.600 rg
+BT /F2 22 Tf 110 718 Td (READINESS CRITERIA) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 680 Td ([X] Server-Side Dispatch: Route critical conversion events via backend API calls) Tj ET
+BT /F1 18 Tf 110 652 Td ([X] Idempotency Keys: Compute deterministic SHA-256 fingerprints on every payload) Tj ET
+BT /F1 18 Tf 110 624 Td ([X] Standardized Enums: Strictly validate event types and platform metadata at API boundary) Tj ET
+BT /F1 18 Tf 110 596 Td ([X] Asynchronous Queuing: Buffer traffic spikes using Redis or distributed streams) Tj ET
+0.08 0.11 0.18 rg 80 260 920 210 re f
+0.18 0.24 0.35 RG 1 w 80 260 920 210 re s
+0.220 0.740 0.970 rg 80 260 6 210 re f
+0.220 0.740 0.970 rg
+BT /F2 22 Tf 110 428 Td (GET THE BLUEPRINT) Tj ET
+0.85 0.89 0.94 rg
+BT /F1 18 Tf 110 390 Td (Download the full architecture specification, database schemas, and sample code) Tj ET
+BT /F1 18 Tf 110 362 Td (via the verified link in this post.) Tj ET
+0.15 0.20 0.30 RG 1 w 80 80 920 0 re s
+0.45 0.52 0.62 rg
+BT /F1 16 Tf 80 50 Td (IncuBrix Growth Engineering) Tj ET
+0.200 0.830 0.600 rg
+BT /F2 16 Tf 880 50 Td (Save for next sprint - [5/5]) Tj ET
+endstream
+endobj
+xref
+0 15
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000147 00000 n 
+0000000217 00000 n 
+0000000292 00000 n 
+0000000430 00000 n 
+0000001983 00000 n 
+0000002121 00000 n 
+0000004134 00000 n 
+0000004273 00000 n 
+0000006004 00000 n 
+0000006144 00000 n 
+0000007750 00000 n 
+0000007890 00000 n 
+trailer
+<< /Size 15 /Root 1 0 R >>
+startxref
+9675
+%%EOF
