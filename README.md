@@ -332,6 +332,61 @@ Expected JSON response:
 
 ---
 
+## Phase 1 Media Production & Video Rendering Pipeline
+
+Phase 1 completes the end-to-end production of all 30 social media assets documented in [`research/asset_blueprint.csv`](research/asset_blueprint.csv), including automated vertical video rendering, multi-page vector carousel PDFs, architecture diagrams, and publication-ready copy.
+
+### 1. Deliverable Summary (30 Assets Total)
+- **13 Short Videos (`short_video`)**: 1080x1920 vertical MP4s ($\le 60$s), neural voiceover, synchronized dynamic captions, code and telemetry graphics.
+  - Formats: Source markdown scripts in `outputs/source/videos/`, rendered MP4s in `outputs/final/videos/`.
+  - Platforms: YouTube Shorts (9), LinkedIn (3), X (1).
+- **4 Carousels (`carousel`)**: 1080x1350 multi-page dark-mode slide decks (5–8 slides each).
+  - Formats: Markdown spec + HTML interactive viewer in `outputs/source/carousels/`, vector PDF in `outputs/final/carousels/`.
+  - Platform: LinkedIn (4).
+- **3 Graphics (`graphic`)**: 1200x675 high-resolution architectural infographics and retention charts.
+  - Formats: Markdown spec + SVG vector source in `outputs/source/graphics/`, rendered PNG in `outputs/final/graphics/`.
+  - Platform: X (3).
+- **10 Text Posts (`text_post`)**: Publication-ready long-form copy and threaded posts with character counts and verified evidence tags.
+  - Formats: Markdown specs in `outputs/source/copy/` and `outputs/final/copy/`.
+  - Platforms: LinkedIn (4), X (6).
+
+### 2. Reproducible Generation Commands
+
+#### Batch Render All 13 Short Videos:
+```powershell
+.\.venv\Scripts\python.exe scripts/render_all_videos.py
+```
+*Note: Uses `edge-tts` (Microsoft neural TTS) for clear voiceover, `Pillow` for frame synthesis with kinetic captions, and `imageio-ffmpeg` for H.264/AAC MP4 encoding.*
+
+#### Render Multi-Page Carousel PDFs:
+```powershell
+.\.venv\Scripts\python.exe scripts/render_carousel_pdf.py
+```
+*Note: Generates vector PDF 1.4 documents (1080x1350 pt) natively in Python.*
+
+#### Render Graphic PNGs:
+```powershell
+.\.venv\Scripts\python.exe scripts/render_graphics.py
+```
+*Note: Renders crisp 1200x675 PNG diagrams with Pillow.*
+
+#### Run Phase 1 Technical Validation Audit:
+```powershell
+.\.venv\Scripts\python.exe scripts/validate_phase1.py
+```
+*Verifies all 30 assets, video durations $\le 60$s, resolutions (1080x1920, 1080x1350, 1200x675), audio/video streams, and source-to-final traceability.*
+
+### 3. Remaining Manual Tasks
+1. **Live Product Demo Screencasts (2 Unedited Videos)**:
+   The assessment Option 2 specification requires two unedited walkthrough videos demonstrating:
+   - Video A: Ingestion of source documents and automated generation of multi-platform social assets.
+   - Video B: Duplicate detection, evidence reference verification, and CSV/JSON export workflows.
+   *Status: Requires interactive desktop screen recording with the operator's microphone.*
+2. **Phase 2 Content Calendar Review**:
+   Review and schedule the 30 planned assets into the editorial calendar once public posting channels and UTM parameters are confirmed.
+
+---
+
 ## Content Safety & Editorial Guardrails
 
 1. **Evidence-Based Copy**: All claims, metrics, and capabilities must originate strictly from the provided source document.

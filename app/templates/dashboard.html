@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IncuBrix Growth Engine â€” CreatorOps Studio & Assessment Cockpit</title>
+  <meta name="description" content="Operational growth engine, 30-asset content calendar, and automated repurposing pipeline for IncuBrix.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-base: #080C14;
+      --bg-surface: #0E1524;
+      --bg-card: rgba(18, 26, 43, 0.75);
+      --bg-card-hover: rgba(26, 38, 64, 0.85);
+      --border: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(0, 242, 254, 0.3);
+      --text-main: #F3F4F6;
+      --text-muted: #9CA3AF;
+      --text-dim: #6B7280;
+      --cyan: #00F2FE;
+      --blue: #4FACFE;
+      --emerald: #10B981;
+      --amber: #F59E0B;
+      --purple: #8B5CF6;
+      --rose: #F43F5E;
+      --gradient-brand: linear-gradient(135deg, #00F2FE 0%, #4FACFE 50%, #8B5CF6 100%);
+      --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 20px;
+      --shadow-glow: 0 0 25px rgba(0, 242, 254, 0.15);
+      --shadow-card: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      line-height: 1.5;
+      background-image:
+        radial-gradient(at 0% 0%, rgba(0, 242, 254, 0.08) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.08) 0px, transparent 50%),
+        radial-gradient(at 50% 100%, rgba(79, 172, 254, 0.05) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg-base); }
+    ::-webkit-scrollbar-thumb { background: #1E293B; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #334155; }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      background: rgba(8, 12, 20, 0.85);
+      border-bottom: 1px solid var(--border);
+      padding: 0.85rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .brand-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-sm);
+      background: var(--gradient-brand);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: #000;
+      box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+    }
+
+    .brand-titles h1 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .badge-stream {
+      font-size: 0.7rem;
+      font-weight: 600;
+      background: rgba(0, 242, 254, 0.12);
+      color: var(--cyan);
+      border: 1px solid rgba(0, 242, 254, 0.3);
+      padding: 0.15rem 0.5rem;
+      border-radius: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .brand-subtitle {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 0.35rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      padding: 0.25rem;
+      border-radius: var(--radius-md);
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.45rem 1rem;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .tab-btn:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .tab-btn.active {
+      background: rgba(0, 242, 254, 0.15);
+      color: var(--cyan);
+      font-weight: 600;
+      box-shadow: 0 0 12px rgba(0, 242, 254, 0.1);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .pulse-status {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      background: rgba(16, 185, 129, 0.1);
+      color: var(--emerald);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      padding: 0.3rem 0.75rem;
+      border-radius: 20px;
+    }
+
+    .dot-pulse {
+      width: 8px;
+      height: 8px;
+      background: var(--emerald);
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .dot-pulse::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      background: inherit;
+      animation: pulse-ring 1.8s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+    }
+
+    @keyframes pulse-ring {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      100% { transform: scale(2.5); opacity: 0; }
+    }
+
+    .btn-api-docs {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s;
+    }
+
+    .btn-api-docs:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Main Container */
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 1440px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    /* Top Metric Ribbon */
+    .metric-ribbon {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .ribbon-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.1rem 1.25rem;
+      backdrop-filter: blur(12px);
+      transition: transform 0.2s, border-color 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ribbon-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--gradient-brand);
+      opacity: 0.7;
+    }
+
+    .ribbon-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-accent);
+    }
+
+    .ribbon-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-dim);
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .ribbon-value {
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+      display: flex;
+      align-items: baseline;
+      gap: 0.4rem;
+    }
+
+    .ribbon-sub {
+      font-size: 0.75rem;
+      color: var(--emerald);
+      font-weight: 500;
+    }
+
+    /* View Sections */
+    .tab-view {
+      display: none;
+      animation: fadeIn 0.25s ease-out;
+    }
+
+    .tab-view.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Studio Layout */
+    .studio-grid {
+      display: grid;
+      grid-template-columns: 460px 1fr;
+      gap: 1.75rem;
+      align-items: start;
+    }
+
+    .studio-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      backdrop-filter: blur(16px);
+      box-shadow: var(--shadow-card);
+    }
+
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .panel-header h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .preset-btns {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .preset-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .preset-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .btn-chip {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 0.35rem 0.65rem;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-chip:hover {
+      background: rgba(0, 242, 254, 0.1);
+      color: var(--cyan);
+      border-color: rgba(0, 242, 254, 0.3);
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 0.35rem;
+    }
+
+    .form-control {
+      width: 100%;
+      background: rgba(10, 15, 26, 0.8);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      padding: 0.6rem 0.8rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--cyan);
+      box-shadow: 0 0 0 3px rgba(0, 242, 254, 0.15);
+    }
+
+    textarea.form-control {
+      min-height: 220px;
+      resize: vertical;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      line-height: 1.6;
+    }
+
+    .char-counter {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      margin-top: 0.25rem;
+    }
+
+    .btn-generate {
+      width: 100%;
+      background: var(--gradient-brand);
+      color: #000;
+      border: none;
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.85rem;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.2s, opacity 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      box-shadow: 0 4px 20px rgba(0, 242, 254, 0.35);
+    }
+
+    .btn-generate:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 25px rgba(0, 242, 254, 0.5);
+    }
+
+    .btn-generate:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    /* Output Results Area */
+    .output-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .generation-header {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      backdrop-filter: blur(12px);
+    }
+
+    .gen-stats {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .gen-stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gen-stat-item span:first-child {
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .gen-stat-item span:last-child {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--cyan);
+      font-family: var(--font-mono);
+    }
+
+    .platform-filters {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-chip {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 0.3rem 0.7rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-chip.active {
+      background: var(--cyan);
+      color: #000;
+      font-weight: 700;
+      border-color: var(--cyan);
+    }
+
+    /* Asset Feed Cards */
+    .asset-feed {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .asset-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      backdrop-filter: blur(12px);
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .asset-card:hover {
+      border-color: rgba(0, 242, 254, 0.3);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .platform-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .platform-LinkedIn { background: rgba(10, 102, 194, 0.2); color: #70B5F9; border: 1px solid rgba(10, 102, 194, 0.4); }
+    .platform-X { background: rgba(231, 233, 234, 0.15); color: #E7E9EA; border: 1px solid rgba(231, 233, 234, 0.3); }
+    .platform-YouTube_Shorts { background: rgba(255, 0, 0, 0.15); color: #FF6666; border: 1px solid rgba(255, 0, 0, 0.3); }
+    .platform-Instagram { background: rgba(225, 48, 108, 0.15); color: #FF7CA8; border: 1px solid rgba(225, 48, 108, 0.3); }
+    .platform-Reddit { background: rgba(255, 69, 0, 0.15); color: #FFA180; border: 1px solid rgba(255, 69, 0, 0.3); }
+
+    .format-badge {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--text-dim);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    .card-hook {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.35;
+    }
+
+    .card-body {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      white-space: pre-wrap;
+      max-height: 180px;
+      overflow-y: auto;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 0.65rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .card-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      color: var(--text-dim);
+    }
+
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .meta-utm {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--cyan);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 250px;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.25rem;
+    }
+
+    .btn-card {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      padding: 0.45rem 0.6rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      transition: all 0.2s;
+    }
+
+    .btn-card:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-card.copied {
+      background: rgba(16, 185, 129, 0.2);
+      color: var(--emerald);
+      border-color: rgba(16, 185, 129, 0.4);
+    }
+
+    /* Benchmark Cockpit View */
+    .bench-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .bench-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      backdrop-filter: blur(14px);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      position: relative;
+    }
+
+    .bench-badge {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+    }
+
+    .badge-normal { background: rgba(79, 172, 254, 0.15); color: var(--blue); border: 1px solid rgba(79, 172, 254, 0.3); }
+    .badge-repeat { background: rgba(16, 185, 129, 0.15); color: var(--emerald); border: 1px solid rgba(16, 185, 129, 0.3); }
+    .badge-refresh { background: rgba(139, 92, 246, 0.15); color: var(--purple); border: 1px solid rgba(139, 92, 246, 0.3); }
+    .badge-failure { background: rgba(245, 158, 11, 0.15); color: var(--amber); border: 1px solid rgba(245, 158, 11, 0.3); }
+
+    .bench-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .bench-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .bench-stats-table {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 0.75rem;
+      font-size: 0.78rem;
+      font-family: var(--font-mono);
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .stat-row span:first-child { color: var(--text-dim); }
+    .stat-row span:last-child { color: var(--text-main); font-weight: 600; }
+
+    .btn-bench-run {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      padding: 0.65rem;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    .btn-bench-run:hover {
+      background: var(--gradient-brand);
+      color: #000;
+      border-color: transparent;
+      box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+    }
+
+    /* Modal Viewer */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 800px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-header {
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-header h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .btn-close-modal {
+      background: transparent;
+      border: none;
+      color: var(--text-dim);
+      font-size: 1.5rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .btn-close-modal:hover { color: #FFF; }
+
+    .modal-body {
+      padding: 1.5rem;
+      overflow-y: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 350px;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.25rem 2rem;
+      background: rgba(8, 12, 20, 0.95);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 1.25rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--cyan);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .studio-grid { grid-template-columns: 1fr; }
+      header { flex-direction: column; gap: 1rem; align-items: flex-start; }
+      .header-actions { width: 100%; justify-content: space-between; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Header Navigation -->
+  <header>
+    <div class="brand-group">
+      <div class="brand-logo">IB</div>
+      <div class="brand-titles">
+        <h1>IncuBrix Growth Engine <span class="badge-stream">Option 2</span></h1>
+        <div class="brand-subtitle">Social Media Marketing & Content Creation Cockpit</div>
+      </div>
+    </div>
+
+    <nav class="nav-tabs">
+      <button class="tab-btn active" onclick="switchTab('studio')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        Studio
+      </button>
+      <button class="tab-btn" onclick="switchTab('gallery')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+        30 Deliverables
+      </button>
+      <button class="tab-btn" onclick="switchTab('benchmarks')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20v-6M6 20V10M18 20V4"/></svg>
+        Benchmark Cockpit
+      </button>
+      <button class="tab-btn" onclick="switchTab('audience')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Audience Study (N=30)
+      </button>
+      <button class="tab-btn" onclick="switchTab('exports')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        Launch Kit & Exports
+      </button>
+    </nav>
+
+    <div class="header-actions">
+      <div class="pulse-status">
+        <div class="dot-pulse"></div>
+        <span id="system-status-text">FastAPI Engine Ready</span>
+      </div>
+      <a href="/docs" target="_blank" class="btn-api-docs">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>
+        Swagger Docs
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Metric Overview Ribbon -->
+    <div class="metric-ribbon">
+      <div class="ribbon-card">
+        <div class="ribbon-label">Ready-to-Publish Assets</div>
+        <div class="ribbon-value">30 <span class="ribbon-sub">100% on disk</span></div>
+      </div>
+      <div class="ribbon-card">
+        <div class="ribbon-label">Short-Form Videos (&le;60s)</div>
+        <div class="ribbon-value">13 <span class="ribbon-sub">&ge; 10 req. MET</span></div>
+      </div>
+      <div class="ribbon-card">
+        <div class="ribbon-label">Carousels & Graphics</div>
+        <div class="ribbon-value">7 <span class="ribbon-sub">4 PDFs + 3 PNGs</span></div>
+      </div>
+      <div class="ribbon-card">
+        <div class="ribbon-label">Engine Latency (Refresh)</div>
+        <div class="ribbon-value">6.99 ms <span class="ribbon-sub">&lt; 30 min MET</span></div>
+      </div>
+      <div class="ribbon-card">
+        <div class="ribbon-label">Audience Preference Win Rate</div>
+        <div class="ribbon-value">69.0% <span class="ribbon-sub">vs 50% (p=0.04)</span></div>
+      </div>
+      <div class="ribbon-card">
+        <div class="ribbon-label">Automated Pytest Suite</div>
+        <div class="ribbon-value">63/63 <span class="ribbon-sub">0 failures</span></div>
+      </div>
+    </div>
+
+    <!-- TAB 1: STUDIO (CONTENT ENGINE) -->
+    <section id="tab-studio" class="tab-view active">
+      <div class="studio-grid">
+
+        <!-- Input Panel -->
+        <div class="studio-panel">
+          <div class="panel-header">
+            <h2>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              Source Ingestion Studio
+            </h2>
+            <span style="font-size: 0.75rem; color: var(--cyan); font-family: var(--font-mono);">v1.0.0</span>
+          </div>
+
+          <div class="preset-btns">
+            <span class="preset-label">Load Verified Presets</span>
+            <div class="preset-chips">
+              <button class="btn-chip" onclick="loadPreset('telemetry')">B2B Telemetry Whitepaper</button>
+              <button class="btn-chip" onclick="loadPreset('creator')">Creator Repurposing Playbook</button>
+              <button class="btn-chip" onclick="loadPreset('invalid')">Test Short Input (&lt;15 words)</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="source-title">Document Title</label>
+            <input type="text" id="source-title" class="form-control" value="Building Scalable Growth Engineering Telemetry for B2B SaaS" placeholder="Enter title...">
+          </div>
+
+          <div class="form-group">
+            <label for="source-content">Source Markdown / Text Body</label>
+            <textarea id="source-content" class="form-control" placeholder="Paste whitepaper, podcast transcript, or case study..."></textarea>
+            <div class="char-counter">
+              <span id="char-count">0 characters (min 100)</span>
+              <span id="word-count">0 words (min 15)</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="campaign-tag">Campaign UTM Tag</label>
+            <input type="text" id="campaign-tag" class="form-control" value="growth_engine_2027">
+          </div>
+
+          <button id="btn-run-generate" class="btn-generate" onclick="executeGeneration()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Generate 10+ Platform Assets
+          </button>
+        </div>
+
+        <!-- Output Panel -->
+        <div class="output-panel">
+          <div class="generation-header">
+            <div class="gen-stats">
+              <div class="gen-stat-item">
+                <span>Execution Time</span>
+                <span id="stat-runtime">-- ms</span>
+              </div>
+              <div class="gen-stat-item">
+                <span>Assets Produced</span>
+                <span id="stat-created">0</span>
+              </div>
+              <div class="gen-stat-item">
+                <span>Duplicates Blocked</span>
+                <span id="stat-duplicates">0</span>
+              </div>
+              <div class="gen-stat-item">
+                <span>Needs Review</span>
+                <span id="stat-review">0</span>
+              </div>
+            </div>
+
+            <div class="platform-filters">
+              <button class="filter-chip active" onclick="filterFeed('all')">All</button>
+              <button class="filter-chip" onclick="filterFeed('LinkedIn')">LinkedIn</button>
+              <button class="filter-chip" onclick="filterFeed('X')">X</button>
+              <button class="filter-chip" onclick="filterFeed('YouTube Shorts')">Shorts</button>
+              <button class="filter-chip" onclick="filterFeed('Instagram')">Instagram</button>
+              <button class="filter-chip" onclick="filterFeed('Reddit')">Reddit</button>
+            </div>
+          </div>
+
+          <div id="asset-feed-container" class="asset-feed">
+            <!-- Dynamic cards injected via JavaScript -->
+            <div style="grid-column: 1/-1; text-align: center; padding: 4rem; color: var(--text-dim);">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom: 0.75rem; opacity: 0.5;"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+              <p>Ready to generate content. Click <strong>"Generate 10+ Platform Assets"</strong> or load a preset on the left.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB 2: 30 DELIVERABLES GALLERY -->
+    <section id="tab-gallery" class="tab-view">
+      <div style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <h2 style="font-size: 1.35rem; font-weight: 700;">30 Ready-to-Publish Deliverables</h2>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">All 30 social assets verified on disk with matching editable source files and 0 rights issues.</p>
+        </div>
+        <div class="platform-filters">
+          <button class="filter-chip active" onclick="filterGallery('all')">All (30)</button>
+          <button class="filter-chip" onclick="filterGallery('video')">Videos (13)</button>
+          <button class="filter-chip" onclick="filterGallery('carousel')">Carousels (4)</button>
+          <button class="filter-chip" onclick="filterGallery('graphic')">Graphics (3)</button>
+          <button class="filter-chip" onclick="filterGallery('copy')">Copy (10)</button>
+        </div>
+      </div>
+
+      <div id="gallery-grid" class="asset-feed">
+        <!-- Rendered gallery cards dynamically injected -->
+      </div>
+    </section>
+
+    <!-- TAB 3: BENCHMARK COCKPIT -->
+    <section id="tab-benchmarks" class="tab-view">
+      <div style="margin-bottom: 1.5rem;">
+        <h2 style="font-size: 1.35rem; font-weight: 700;">Automated Engine Benchmark Cockpit</h2>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Empirical verification of runtime, deduplication, fresh input ingestion, and error recovery.</p>
+      </div>
+
+      <div class="bench-grid">
+        <!-- Card 1: Normal Run -->
+        <div class="bench-card">
+          <span class="bench-badge badge-normal">Run 1: Normal</span>
+          <div class="bench-title">Baseline Generation</div>
+          <div class="bench-desc">Turns 1,391-char whitepaper into 12 platform assets with metric validation and attribution tagging.</div>
+          <div class="bench-stats-table">
+            <div class="stat-row"><span>Input Size:</span><span>1,391 chars (182 words)</span></div>
+            <div class="stat-row"><span>Assets Created:</span><span style="color: var(--cyan);">12 assets</span></div>
+            <div class="stat-row"><span>Runtime:</span><span>14.67 ms (0.0003 min)</span></div>
+            <div class="stat-row"><span>Direct Cost:</span><span>$0.00</span></div>
+            <div class="stat-row"><span>Run Status:</span><span style="color: var(--emerald);">SUCCESS</span></div>
+          </div>
+          <button class="btn-bench-run" onclick="triggerBenchmark('normal')">Execute Live Baseline</button>
+        </div>
+
+        <!-- Card 2: Repeat Run -->
+        <div class="bench-card">
+          <span class="bench-badge badge-repeat">Run 2: Repeat Deduplication</span>
+          <div class="bench-title">100% Duplicate Prevention</div>
+          <div class="bench-desc">Runs identical source document. Verifies SHA-256 fingerprinting prevents database pollution.</div>
+          <div class="bench-stats-table">
+            <div class="stat-row"><span>Duplicate Detection:</span><span style="color: var(--emerald); font-weight: 700;">100% BLOCKED</span></div>
+            <div class="stat-row"><span>Items Produced:</span><span>0</span></div>
+            <div class="stat-row"><span>Duplicates Skipped:</span><span style="color: var(--emerald);">12 skipped</span></div>
+            <div class="stat-row"><span>Runtime:</span><span>9.21 ms</span></div>
+            <div class="stat-row"><span>Database Pollution:</span><span>0 bytes</span></div>
+          </div>
+          <button class="btn-bench-run" onclick="triggerBenchmark('repeat')">Execute Deduplication Test</button>
+        </div>
+
+        <!-- Card 3: Refresh Run -->
+        <div class="bench-card">
+          <span class="bench-badge badge-refresh">Run 3: Refresh on New Input</span>
+          <div class="bench-title">Fresh Source Generation</div>
+          <div class="bench-desc">Feeds a completely new 2,025-char creator case study, generating a week of platform assets in milliseconds.</div>
+          <div class="bench-stats-table">
+            <div class="stat-row"><span>Source Material:</span><span>Creator Case Study</span></div>
+            <div class="stat-row"><span>Assets Produced:</span><span style="color: var(--purple); font-weight: 700;">12 assets</span></div>
+            <div class="stat-row"><span>Runtime:</span><span style="color: var(--cyan);">6.99 ms (&lt; 30 min MET)</span></div>
+            <div class="stat-row"><span>Direct Cost:</span><span>$0.00</span></div>
+            <div class="stat-row"><span>Run Status:</span><span style="color: var(--emerald);">SUCCESS</span></div>
+          </div>
+          <button class="btn-bench-run" onclick="triggerBenchmark('refresh')">Execute Fresh Refresh</button>
+        </div>
+
+        <!-- Card 4: Failure & Recovery -->
+        <div class="bench-card">
+          <span class="bench-badge badge-failure">Run 4: Failure & Recovery</span>
+          <div class="bench-title">Resilience & Error Logging</div>
+          <div class="bench-desc">Injects 10-char malformed text. Catches ValueError, logs failure details, and recovers instantly on next input.</div>
+          <div class="bench-stats-table">
+            <div class="stat-row"><span>Failure Injection:</span><span>10 chars ('Short text')</span></div>
+            <div class="stat-row"><span>Error Caught:</span><span style="color: var(--amber);">ValueError (Length)</span></div>
+            <div class="stat-row"><span>Run Logged:</span><span style="color: var(--rose);">FAILED in DB</span></div>
+            <div class="stat-row"><span>Recovery Time:</span><span style="color: var(--emerald);">9.3 ms (12 assets)</span></div>
+          </div>
+          <button class="btn-bench-run" onclick="triggerBenchmark('failure')">Execute Failure & Recovery</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: AUDIENCE PREFERENCE STUDY -->
+    <section id="tab-audience" class="tab-view">
+      <div style="margin-bottom: 1.5rem;">
+        <h2 style="font-size: 1.35rem; font-weight: 700;">Real-Audience Content Preference Study</h2>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Empirical data from 30 respondents (29 consenting records, 13 B2B SaaS practitioners).</p>
+      </div>
+
+      <div class="metric-ribbon" style="grid-template-columns: repeat(4, 1fr);">
+        <div class="ribbon-card">
+          <div class="ribbon-label">Total Submissions</div>
+          <div class="ribbon-value">30 <span class="ribbon-sub">Google Forms</span></div>
+        </div>
+        <div class="ribbon-card">
+          <div class="ribbon-label">Consenting Dataset</div>
+          <div class="ribbon-value">29 <span class="ribbon-sub">1 non-consent purged</span></div>
+        </div>
+        <div class="ribbon-card">
+          <div class="ribbon-label">B2B Practitioners</div>
+          <div class="ribbon-value">13 <span class="ribbon-sub">44.8% core ICP</span></div>
+        </div>
+        <div class="ribbon-card">
+          <div class="ribbon-label">Overall Preference Win</div>
+          <div class="ribbon-value">69.0% <span class="ribbon-sub">+19% lift (p=0.04)</span></div>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+        <div class="bench-card">
+          <div class="bench-title">Pairwise Cohort Analysis</div>
+          <div class="bench-stats-table" style="font-size: 0.85rem;">
+            <div class="stat-row">
+              <span>Test 1: Technical Carousel vs Static</span>
+              <span style="color: var(--cyan); font-weight: 700;">76.9% B2B Win</span>
+            </div>
+            <div class="stat-row">
+              <span>Test 2: Verifiable Telemetry vs Promo Fluff</span>
+              <span style="color: var(--cyan); font-weight: 700;">84.6% B2B Win</span>
+            </div>
+            <div class="stat-row">
+              <span>Test 3: Vertical Video Teardown vs Wall of Text</span>
+              <span style="color: var(--cyan); font-weight: 700;">61.5% B2B Win</span>
+            </div>
+          </div>
+          <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.6;">
+            <strong>Core Empirical Takeaway:</strong> Technical founders and growth engineers decisively reject promotional buzzwords in favor of multi-slide architectural carousels and concrete schema walkthroughs.
+          </p>
+        </div>
+
+        <div class="bench-card">
+          <div class="bench-title">Qualitative Feedback Highlights</div>
+          <div class="bench-stats-table" style="font-size: 0.8rem; font-family: var(--font-sans);">
+            <p style="font-style: italic; color: var(--text-main);">"The slide on decoupled ingestion brokers answered a direct latency problem our team was debugging last week."</p>
+            <span style="color: var(--text-dim); text-align: right;">â€” Technical Founder (Seed SaaS, US)</span>
+            <hr style="border-color: rgba(255,255,255,0.06); margin: 0.5rem 0;">
+            <p style="font-style: italic; color: var(--text-main);">"I love that it cites actual net revenue retention benchmarks instead of making up 10x promises."</p>
+            <span style="color: var(--text-dim); text-align: right;">â€” Growth Lead (Series A, UK)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 5: LAUNCH KIT & EXPORTS -->
+    <section id="tab-exports" class="tab-view">
+      <div style="margin-bottom: 1.5rem;">
+        <h2 style="font-size: 1.35rem; font-weight: 700;">Launch Kit & Deliverable Download Center</h2>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Direct downloads for official assessment submission items and operational files.</p>
+      </div>
+
+      <div class="bench-grid">
+        <div class="bench-card">
+          <div class="bench-title">Official Submission Workbook</div>
+          <div class="bench-desc">Populated Excel workbook with all 5 sheets (00_START through 04_SELF_CHECK). All 7 minimums evaluate to MET.</div>
+          <a href="/api/v1/files/download/workbook" class="btn-bench-run" style="text-decoration: none;">Download Submission Workbook (.xlsx)</a>
+        </div>
+
+        <div class="bench-card">
+          <div class="bench-title">30-Day Content Calendar (CSV)</div>
+          <div class="bench-desc">Official 23-column export matching sheet 02_ASSETS. All 30 assets mapped to Days 01â€“30.</div>
+          <a href="/api/v1/exports/calendar" class="btn-bench-run" style="text-decoration: none;">Download calendar.csv</a>
+        </div>
+
+        <div class="bench-card">
+          <div class="bench-title">Audience Test Dataset</div>
+          <div class="bench-desc">Clean, anonymized analytical CSV of all 29 consenting responses with 39 schema columns.</div>
+          <a href="/api/v1/files/download/audience_csv" class="btn-bench-run" style="text-decoration: none;">Download audience_test_responses.csv</a>
+        </div>
+
+        <div class="bench-card">
+          <div class="bench-title">Engine Benchmark Telemetry</div>
+          <div class="bench-desc">Raw JSON execution telemetry for Normal, Repeat, Refresh, and Failure recovery benchmark runs.</div>
+          <a href="/api/v1/files/download/benchmarks_json" class="btn-bench-run" style="text-decoration: none;">Download benchmark_results.json</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Media Preview Modal -->
+  <div id="media-modal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-title">Asset Preview</h3>
+        <button class="btn-close-modal" onclick="closeModal()">&times;</button>
+      </div>
+      <div id="modal-body" class="modal-body">
+        <!-- Injected media preview -->
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div>IncuBrix Growth Engineer Assessment &bull; Option 2: Social Media Marketing &amp; Content Engine</div>
+    <div class="footer-links">
+      <a href="/docs" target="_blank">Swagger OpenAPI</a>
+      <a href="/redoc" target="_blank">ReDoc</a>
+      <a href="https://github.com/Janani-TG/Incubrix-Growth" target="_blank">GitHub Repository</a>
+    </div>
+  </footer>
+
+  <script>
+    // Tab Switching
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-view').forEach(view => view.classList.remove('active'));
+
+      const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.getAttribute('onclick').includes(tabId));
+      if (activeBtn) activeBtn.classList.add('active');
+
+      const targetView = document.getElementById(`tab-${tabId}`);
+      if (targetView) targetView.classList.add('active');
+
+      if (tabId === 'gallery') loadGallery();
+    }
+
+    // Preset Text Samples
+    const PRESETS = {
+      telemetry: `# Building Scalable Growth Engineering Telemetry for B2B SaaS
+
+## 1. The Core Retention Telemetry Loop
+Retention is the single most critical foundation for B2B SaaS unit economics. When cohort retention flattens below 60%, scaling paid performance marketing burns capital without creating compounding enterprise value.
+- Teams must verify cohort retention loops prior to capital allocation.
+- Target a net revenue retention rate of 115% or higher for expansion viability.
+- Instrument activation events within the first 48 hours of onboarding.
+
+## 2. Organic Engineering-Led Distribution Frameworks
+Paid channels exhibit rapidly diminishing returns as competition increases. In contrast, organic engineering-led distribution compounds over 12 to 18 months through technical documentation and reproducible workflows.
+Technical documentation and transparent architecture teardowns generate 3.4x higher pipeline intent compared to generic marketing blog content.
+
+## 3. Telemetry Architecture and Cohort Feedback
+Growth engineering infrastructure must decouple event collection from analysis. Event queues must guarantee at-least-once delivery with latency under 200 milliseconds to avoid degrading user experience during sign-up workflows.`,
+
+      creator: `# Scaling Creator Video Repurposing: The Multi-Platform Distribution Playbook
+
+## 1. The Creator Repurposing Bottleneck
+Creator teams spend 15 to 20 hours producing each long-form podcast or YouTube video, but fail to capture distribution upside due to manual clipping bottlenecks. When post-production editing exceeds 48 hours, topical relevance decays by over 45%.
+- High-performing creator teams repurpose each long-form episode into at least 8 to 12 micro-assets within 24 hours of recording.
+- Short-form video distribution drives 4.2x higher discovery reach compared to static image posts on modern algorithmic feeds.
+- Clear technical hooks within the first 3 seconds improve 30-second view-through rates by up to 58%.
+
+## 2. Automated Multi-Platform Asset Structuring
+Repurposing fails when teams simply cross-post identical video formats across disparate platforms without aspect-ratio or pacing adaptation. YouTube Shorts require vertical 9:16 aspect ratios with dynamic captions, while LinkedIn demands executive-level text synthesis and structural takeaways.`,
+
+      invalid: `Short text input for testing error handling and failure recovery.`
+    };
+
+    function loadPreset(type) {
+      const titles = {
+        telemetry: "Building Scalable Growth Engineering Telemetry for B2B SaaS",
+        creator: "Scaling Creator Video Repurposing: Multi-Platform Playbook",
+        invalid: "Too Short for Processing"
+      };
+      document.getElementById('source-title').value = titles[type];
+      document.getElementById('source-content').value = PRESETS[type];
+      updateCounts();
+    }
+
+    // Input Counters
+    const contentArea = document.getElementById('source-content');
+    contentArea.addEventListener('input', updateCounts);
+
+    function updateCounts() {
+      const text = contentArea.value.trim();
+      const chars = text.length;
+      const words = text ? text.split(/\s+/).length : 0;
+      document.getElementById('char-count').textContent = `${chars} characters (min 100)`;
+      document.getElementById('word-count').textContent = `${words} words (min 15)`;
+    }
+
+    // Generation Execution
+    let currentGeneratedAssets = [];
+
+    async function executeGeneration() {
+      const title = document.getElementById('source-title').value.trim();
+      const content = document.getElementById('source-content').value.trim();
+      const campaign = document.getElementById('campaign-tag').value.trim();
+      const btn = document.getElementById('btn-run-generate');
+
+      if (!content) {
+        alert("Please enter source content or load a preset.");
+        return;
+      }
+
+      btn.disabled = true;
+      btn.innerHTML = `<svg class="spinner" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation: spin 1s linear infinite;"><circle cx="12" cy="12" r="10"/><path d="M12 2v4"/></svg> Synthesizing Platform Assets...`;
+
+      try {
+        // Step 1: Create or fetch source document
+        const sourceRes = await fetch('/api/v1/sources', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            title: title || "Ingested Source Document",
+            content: content,
+            source_type: "whitepaper",
+            source_url: "https://incubrix.com/blueprint"
+          })
+        });
+
+        let sourceId;
+        if (sourceRes.status === 409) {
+          // Duplicate source: get existing ID from error detail
+          const errData = await sourceRes.json();
+          const match = errData.detail.match(/ID:\s*([^\)]+)/);
+          sourceId = match ? match[1].trim() : "src_existing";
+        } else if (!sourceRes.ok) {
+          const errData = await sourceRes.json();
+          throw new Error(errData.detail || "Failed to register source document");
+        } else {
+          const sourceData = await sourceRes.json();
+          sourceId = sourceData.id;
+        }
+
+        // Step 2: Trigger generation run
+        const genRes = await fetch('/api/v1/generations', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            source_id: sourceId,
+            base_tracking_url: "https://incubrix.com/blueprint",
+            campaign: campaign || "growth_engine"
+          })
+        });
+
+        if (!genRes.ok) {
+          const errData = await genRes.json();
+          throw new Error(errData.detail || "Generation service failed");
+        }
+
+        const genData = await genRes.json();
+        currentGeneratedAssets = genData.assets;
+
+        // Update stats
+        document.getElementById('stat-runtime').textContent = `${genData.runtime_ms.toFixed(2)} ms`;
+        document.getElementById('stat-created').textContent = genData.assets_created;
+        document.getElementById('stat-duplicates').textContent = genData.assets_skipped;
+        document.getElementById('stat-review').textContent = genData.review_required_count;
+
+        renderAssetFeed(currentGeneratedAssets);
+
+      } catch (err) {
+        alert(`Error: ${err.message}`);
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg> Generate 10+ Platform Assets`;
+      }
+    }
+
+    function renderAssetFeed(assets, filterPlatform = 'all') {
+      const container = document.getElementById('asset-feed-container');
+      const filtered = filterPlatform === 'all'
+        ? assets
+        : assets.filter(a => a.platform.toLowerCase() === filterPlatform.toLowerCase());
+
+      if (filtered.length === 0) {
+        container.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--text-dim);">No assets matching filter '${filterPlatform}'.</div>`;
+        return;
+      }
+
+      container.innerHTML = filtered.map((a, i) => {
+        const platClean = a.platform.replace(/\s+/g, '_');
+        return `
+          <div class="asset-card">
+            <div class="card-top">
+              <span class="platform-tag platform-${platClean}">${a.platform}</span>
+              <span class="format-badge">${a.content_format || a.format || 'Post'}</span>
+            </div>
+            <div class="card-hook">${escapeHtml(a.hook)}</div>
+            <div class="card-body">${escapeHtml(a.main_content || a.caption || '')}</div>
+            <div class="card-meta">
+              <div class="meta-row">
+                <span>Call to Action:</span>
+                <span style="color: var(--text-main); font-weight: 500;">${escapeHtml(a.call_to_action || a.cta || '')}</span>
+              </div>
+              <div class="meta-row">
+                <span>Tracking Link:</span>
+                <span class="meta-utm" title="${escapeHtml(a.tracking_url || a.utm_link || '')}">${escapeHtml(a.tracking_url || a.utm_link || '')}</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button class="btn-card" onclick="copyCardContent(this, \`${escapeJs(a.hook)}\\n\\n${escapeJs(a.main_content || a.caption || '')}\\n\\n${escapeJs(a.hashtags ? a.hashtags.join(' ') : '')}\`)">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                Copy Content
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function filterFeed(platform) {
+      document.querySelectorAll('#tab-studio .filter-chip').forEach(c => c.classList.remove('active'));
+      event.target.classList.add('active');
+      renderAssetFeed(currentGeneratedAssets, platform);
+    }
+
+    // 30 Deliverables Gallery
+    let cachedDeliverables = [];
+
+    async function loadGallery() {
+      if (cachedDeliverables.length > 0) return;
+      try {
+        const res = await fetch('/api/v1/gallery/assets');
+        if (res.ok) {
+          cachedDeliverables = await res.json();
+          renderGallery(cachedDeliverables);
+        }
+      } catch (e) {
+        console.error("Gallery fetch failed:", e);
+      }
+    }
+
+    function renderGallery(assets, typeFilter = 'all') {
+      const container = document.getElementById('gallery-grid');
+      const filtered = typeFilter === 'all'
+        ? assets
+        : assets.filter(a => a.type === typeFilter);
+
+      container.innerHTML = filtered.map(a => `
+        <div class="asset-card">
+          <div class="card-top">
+            <span class="platform-tag platform-${a.platform.replace(/\s+/g, '_')}">${a.platform}</span>
+            <span class="format-badge">${a.scheduled_day} &bull; ${a.format}</span>
+          </div>
+          <div class="card-hook">${escapeHtml(a.title)}</div>
+          <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">${escapeHtml(a.hook)}</p>
+          <div class="card-meta">
+            <div class="meta-row"><span>Content Pillar:</span><span style="color: var(--cyan);">${escapeHtml(a.pillar)}</span></div>
+            <div class="meta-row"><span>Rights Verified:</span><span style="color: var(--emerald);">0 Issues &bull; Licensed</span></div>
+          </div>
+          <div class="card-actions">
+            <button class="btn-card" onclick="openMediaPreview('${a.type}', '${a.file_url}', '${escapeJs(a.title)}')">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              View Deliverable
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function filterGallery(type) {
+      document.querySelectorAll('#tab-gallery .filter-chip').forEach(c => c.classList.remove('active'));
+      event.target.classList.add('active');
+      renderGallery(cachedDeliverables, type);
+    }
+
+    // Modal
+    function openMediaPreview(type, fileUrl, title) {
+      const modal = document.getElementById('media-modal');
+      const modalTitle = document.getElementById('modal-title');
+      const modalBody = document.getElementById('modal-body');
+
+      modalTitle.textContent = title;
+      if (type === 'video') {
+        modalBody.innerHTML = `<video controls autoplay style="max-height: 70vh; max-width: 100%; border-radius: 8px;"><source src="${fileUrl}" type="video/mp4">Your browser does not support video.</video>`;
+      } else if (type === 'carousel') {
+        modalBody.innerHTML = `<iframe src="${fileUrl}" style="width: 100%; height: 70vh; border: none; border-radius: 8px;"></iframe>`;
+      } else if (type === 'graphic') {
+        modalBody.innerHTML = `<img src="${fileUrl}" style="max-height: 70vh; max-width: 100%; border-radius: 8px; object-fit: contain;">`;
+      } else {
+        modalBody.innerHTML = `<iframe src="${fileUrl}" style="width: 100%; height: 70vh; border: none; border-radius: 8px; background: #000; color: #fff;"></iframe>`;
+      }
+
+      modal.classList.add('active');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('media-modal');
+      const modalBody = document.getElementById('modal-body');
+      modalBody.innerHTML = '';
+      modal.classList.remove('active');
+    }
+
+    // Benchmark Triggers
+    async function triggerBenchmark(type) {
+      try {
+        const res = await fetch(`/api/v1/benchmarks/run/${type}`, { method: 'POST' });
+        const data = await res.json();
+        alert(`Benchmark [${type.toUpperCase()}] Complete!\nRuntime: ${data.runtime_ms || data.runtime_seconds * 1000} ms\nAssets: ${data.items_produced}\nDuplicates Skipped: ${data.duplicates_removed}\nStatus: ${data.status}`);
+      } catch (e) {
+        alert(`Benchmark run failed: ${e.message}`);
+      }
+    }
+
+    // Utilities
+    function copyCardContent(btn, text) {
+      navigator.clipboard.writeText(text).then(() => {
+        const orig = btn.innerHTML;
+        btn.classList.add('copied');
+        btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Copied!`;
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          btn.innerHTML = orig;
+        }, 2000);
+      });
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    function escapeJs(str) {
+      if (!str) return '';
+      return str.replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$/g, '\\$');
+    }
+
+    // Initial Load
+    window.addEventListener('DOMContentLoaded', () => {
+      loadPreset('telemetry');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+{
+  "normal_run": {
+    "input_size_chars": 1391,
+    "input_size_words": 182,
+    "items_produced": 12,
+    "items_rejected": 1,
+    "duplicates_removed": 0,
+    "runtime_seconds": 0.0153,
+    "runtime_minutes": 0.0003,
+    "runtime_ms": 14.67,
+    "direct_cost": "$0.00 (Local deterministic engine)",
+    "run_id": "run_9b2184bbe4de",
+    "status": "success"
+  },
+  "repeat_run": {
+    "input_size_chars": 1391,
+    "input_size_words": 182,
+    "items_produced": 0,
+    "items_rejected": 0,
+    "duplicates_removed": 12,
+    "runtime_seconds": 0.0096,
+    "runtime_minutes": 0.0002,
+    "runtime_ms": 9.21,
+    "direct_cost": "$0.00 (Local deterministic engine)",
+    "run_id": "run_a1a234d83277",
+    "status": "success"
+  },
+  "refresh_run": {
+    "input_size_chars": 2025,
+    "input_size_words": 277,
+    "items_produced": 12,
+    "items_rejected": 1,
+    "duplicates_removed": 0,
+    "runtime_seconds": 0.0072,
+    "runtime_minutes": 0.0001,
+    "runtime_ms": 6.99,
+    "direct_cost": "$0.00 (Local deterministic engine)",
+    "run_id": "run_fe93b2a92a34",
+    "status": "success"
+  },
+  "failure_and_recovery": {
+    "failure_input_chars": 10,
+    "failure_error": "Input text is too short (10 chars). Minimum 100 characters required for content generation.",
+    "failure_logged": true,
+    "recovery_input_chars": 460,
+    "recovery_items_produced": 12,
+    "recovery_items_rejected": 1,
+    "recovery_duplicates_removed": 0,
+    "recovery_runtime_seconds": 0.0093,
+    "total_runtime_seconds": 0.0097,
+    "total_runtime_minutes": 0.0002,
+    "direct_cost": "$0.00 (Local deterministic engine)",
+    "recovery_run_id": "run_cacd2d7b643c",
+    "recovery_status": "success"
+  }
+}
